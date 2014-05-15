@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Single menu item
+    set id, icon, and title for each menu item -->
+    <item android:id="@+id/menu_delete"
+        android:icon="@drawable/ic_action_delete"
+        android:title="@string/clear"/>
+    
+    <item android:id="@+id/menu_about"
+        android:icon="@drawable/ic_action_about"
+        android:title="@string/about" />
+
+</menu>
