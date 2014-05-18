@@ -16,6 +16,7 @@
     <string name="title_activity_about">About</string>
     <string name="clear">Clear</string>
     <string name="about">About</string>
+    <string name="mlc">Life Counter</string>
     <string name="help">Help</string>
 
 </resources>
