@@ -2,14 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/White">
+    android:layout_height="match_parent">
     <Button
         android:id="@+id/twoheadedgiant"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:onClick="resetHealth"
-        android:text="set life to 30"/>
+        android:text="set life to 30"
+        android:background="@color/Snow"
+        android:layout_margin="5dp"/>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -25,27 +26,38 @@
                 android:id="@+id/minusOne1"
                 android:text="-1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:background="@color/WhiteSmoke"
+                android:layout_margin="5dp"/>
             <Button
                 android:id="@+id/minusFive1"
                 android:text="-5"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:background="@color/WhiteSmoke"
+                android:layout_margin="5dp"/>
             <Button
                 android:id="@+id/plusOne1"
                 android:text="+1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:background="@color/WhiteSmoke"
+                android:layout_margin="5dp"/>
             <Button
                 android:id="@+id/plusFive1"
                 android:text="+5"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:background="@color/WhiteSmoke"
+                android:layout_margin="5dp" />
             <Button
                 android:id="@+id/player1reset"
                 android:text="Reset"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:background="@color/WhiteSmoke"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"/>
         </LinearLayout>
         <LinearLayout
             android:id='@+id/playerHealth'
@@ -55,34 +67,44 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_margin="5dp">
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:text="Player One"/>
+                    android:text="Player One"
+                    android:layout_gravity="center"
+                    android:textColor="@color/Black"
+                    android:background="@color/NavajoWhite"/>
                 <TextView
                     android:id="@+id/Player1"
                     android:layout_width="100dp"
                     android:layout_height="fill_parent"
-                    android:background="@color/LightCyan"
-                    android:layout_gravity="left"
+                    android:background="@color/AntiqueWhite"
+                    android:textColor="@color/DimGray"
+                    android:layout_gravity="center"
                     android:textSize="32dp"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_margin="5dp">
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:text="Player Two"/>
+                    android:text="Player Two"
+                    android:layout_gravity="center"
+                    android:textColor="@color/Black"
+                    android:background="@color/NavajoWhite"/>
                 <TextView
                     android:id="@+id/Player2"
                     android:layout_width="100dp"
                     android:layout_height="fill_parent"
-                    android:background="@color/LightCyan"
-                    android:textSize="32dp"
-                    android:layout_gravity="right"/>
+                    android:background="@color/AntiqueWhite"
+                    android:textColor="@color/DimGray"
+                    android:layout_gravity="center"
+                    android:textSize="32dp"/>
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
@@ -95,27 +117,38 @@
                 android:id="@+id/minusOne2"
                 android:text="-1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:background="@color/WhiteSmoke"
+                android:layout_margin="5dp" />
             <Button
                 android:id="@+id/minusFive2"
                 android:text="-5"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:background="@color/WhiteSmoke"
+                android:layout_margin="5dp" />
             <Button
                 android:id="@+id/plusOne2"
                 android:text="+1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:background="@color/WhiteSmoke"
+                android:layout_margin="5dp" />
             <Button
                 android:id="@+id/plusFive2"
                 android:text="+5"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:background="@color/WhiteSmoke"
+                android:layout_margin="5dp"/>
             <Button
                 android:id="@+id/player2reset"
                 android:text="Reset"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:background="@color/WhiteSmoke"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

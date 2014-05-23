@@ -1,6 +1,7 @@
 package com.smusings.rollofthedie;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -133,5 +134,16 @@ public class MagicLifeCounter extends SetUpActivity {
 
         player1.setText(twohg.toString());
         player2.setText(twohg.toString());
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_clear:
+                player1.setText(player_health.toString());
+                player2.setText(player_health.toString());
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

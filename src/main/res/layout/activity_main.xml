@@ -3,23 +3,24 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical"
-    android:background="@color/White">
+    android:orientation="vertical">
     <Button
         android:id="@+id/dieRoll"
         android:text="Die Roll"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/Cyan"
+        android:layout_height="40dp"
         android:onClick="dieRoll"
-        android:layout_gravity="center_vertical"/>
+        android:layout_gravity="center_vertical"
+        android:layout_margin="10dp"
+        android:background="@drawable/marble"/>
     <Button
         android:id="@+id/lifeCounter"
         android:text="Life Counter"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/Cyan"
+        android:layout_height="40dp"
         android:onClick="lifeCounter"
-        android:layout_gravity="center_vertical"/>
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/paper"
+        android:layout_margin="10dp"/>
 
 </LinearLayout>

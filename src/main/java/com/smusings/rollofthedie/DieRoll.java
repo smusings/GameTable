@@ -1,7 +1,6 @@
 package com.smusings.rollofthedie;
 
 import android.app.FragmentManager;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
@@ -43,13 +42,8 @@ public class DieRoll extends SetUpActivity
 
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.menu_about:
-                Intent intent = new Intent(this, About.class);
-                startActivity(intent);
-                return true;
-            case R.id.menu_mlc:
-                Intent intent1 = new Intent(this, MagicLifeCounter.class);
-                startActivity(intent1);
+            case R.id.menu_clear:
+                aa.clear();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
