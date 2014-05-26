@@ -2,13 +2,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context=".MainActivity"
-    android:background="@drawable/woodback">
+    tools:context=".MainActivity">
     <fragment
         android:name="com.smusings.rollofthedie.DieRollFragment"
         android:id="@+id/DieRollFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="50dp"/>
     <fragment
         android:name="com.smusings.rollofthedie.RollListFragment"
         android:id="@+id/RollListFragment"

@@ -54,8 +54,6 @@ public class MagicLifeCounter extends SetUpActivity
         player1.setText(Integer.toString(player_health));
         player2.setText(Integer.toString(player_health));
 
-        //reference to UI widgets
-
         //create ArrayList
         Player1Press=new ArrayList<String>();
         Player2Press=new ArrayList<String>();
@@ -63,7 +61,6 @@ public class MagicLifeCounter extends SetUpActivity
 
     public void resetHealth(View view){
         Number twohg= 30;
-
         player1.setText(twohg.toString());
         player2.setText(twohg.toString());
     }

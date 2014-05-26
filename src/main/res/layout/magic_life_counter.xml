@@ -2,17 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/paper">
+    android:layout_height="match_parent">
     <Button
         android:id="@+id/twoheadedgiant"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="resetHealth"
         android:text="set life to 30"
-        android:fontFamily="sans-serif-condensed"
-        android:textColor="@color/DimGray"
-        android:background="@color/OffWhite"
+        android:textColor="@color/White"
+        android:background="@color/DarkBlue"
         android:layout_margin="5dp"
         android:layout_gravity="center"/>
     <LinearLayout
@@ -31,7 +29,7 @@
             android:layout_height="fill_parent"
             android:orientation="horizontal">
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="90dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_margin="5dp">
@@ -39,20 +37,20 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="Player One"
-                    android:layout_gravity="center"
                     android:textColor="@color/DimGray"
-                    android:background="@color/OffNavajoWhite"/>
+                    android:gravity="center"
+                    android:background="@color/Snow"/>
                 <TextView
                     android:id="@+id/Player1"
                     android:layout_width="100dp"
                     android:layout_height="fill_parent"
-                    android:background="@color/AntiqueWhite"
-                    android:textColor="@color/DimGray"
-                    android:layout_gravity="center"
+                    android:background="@color/White"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif-condensed"
                     android:textSize="32dp"/>
             </LinearLayout>
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="90dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_margin="5dp">
@@ -60,16 +58,16 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="Player Two"
-                    android:layout_gravity="center"
                     android:textColor="@color/DimGray"
-                    android:background="@color/OffNavajoWhite"/>
+                    android:gravity="center"
+                    android:background="@color/Snow"/>
                 <TextView
                     android:id="@+id/Player2"
                     android:layout_width="100dp"
                     android:layout_height="fill_parent"
-                    android:background="@color/AntiqueWhite"
-                    android:textColor="@color/DimGray"
-                    android:layout_gravity="center"
+                    android:background="@color/White"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif-condensed"
                     android:textSize="32dp"/>
             </LinearLayout>
         </LinearLayout>
