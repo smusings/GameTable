@@ -2,63 +2,29 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/paper">
     <Button
         android:id="@+id/twoheadedgiant"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="resetHealth"
         android:text="set life to 30"
-        android:background="@color/Snow"
-        android:layout_margin="5dp"/>
+        android:fontFamily="sans-serif-condensed"
+        android:textColor="@color/DimGray"
+        android:background="@color/OffWhite"
+        android:layout_margin="5dp"
+        android:layout_gravity="center"/>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="center">
-        <LinearLayout
-            android:id="@+id/player1buttons"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center">
-            <Button
-                android:id="@+id/minusOne1"
-                android:text="-1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/WhiteSmoke"
-                android:layout_margin="5dp"/>
-            <Button
-                android:id="@+id/minusFive1"
-                android:text="-5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/WhiteSmoke"
-                android:layout_margin="5dp"/>
-            <Button
-                android:id="@+id/plusOne1"
-                android:text="+1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/WhiteSmoke"
-                android:layout_margin="5dp"/>
-            <Button
-                android:id="@+id/plusFive1"
-                android:text="+5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/WhiteSmoke"
-                android:layout_margin="5dp" />
-            <Button
-                android:id="@+id/player1reset"
-                android:text="Reset"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/WhiteSmoke"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"/>
-        </LinearLayout>
+        <fragment
+            android:name="com.smusings.rollofthedie.PlayerOneFragment"
+            android:id="@+id/p1buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
         <LinearLayout
             android:id='@+id/playerHealth'
             android:layout_width="fill_parent"
@@ -74,8 +40,8 @@
                     android:layout_height="wrap_content"
                     android:text="Player One"
                     android:layout_gravity="center"
-                    android:textColor="@color/Black"
-                    android:background="@color/NavajoWhite"/>
+                    android:textColor="@color/DimGray"
+                    android:background="@color/OffNavajoWhite"/>
                 <TextView
                     android:id="@+id/Player1"
                     android:layout_width="100dp"
@@ -95,8 +61,8 @@
                     android:layout_height="wrap_content"
                     android:text="Player Two"
                     android:layout_gravity="center"
-                    android:textColor="@color/Black"
-                    android:background="@color/NavajoWhite"/>
+                    android:textColor="@color/DimGray"
+                    android:background="@color/OffNavajoWhite"/>
                 <TextView
                     android:id="@+id/Player2"
                     android:layout_width="100dp"
@@ -107,48 +73,10 @@
                     android:textSize="32dp"/>
             </LinearLayout>
         </LinearLayout>
-        <LinearLayout
-            android:id="@+id/player2buttons"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center">
-            <Button
-                android:id="@+id/minusOne2"
-                android:text="-1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/WhiteSmoke"
-                android:layout_margin="5dp" />
-            <Button
-                android:id="@+id/minusFive2"
-                android:text="-5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/WhiteSmoke"
-                android:layout_margin="5dp" />
-            <Button
-                android:id="@+id/plusOne2"
-                android:text="+1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/WhiteSmoke"
-                android:layout_margin="5dp" />
-            <Button
-                android:id="@+id/plusFive2"
-                android:text="+5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/WhiteSmoke"
-                android:layout_margin="5dp"/>
-            <Button
-                android:id="@+id/player2reset"
-                android:text="Reset"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/WhiteSmoke"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"/>
-        </LinearLayout>
+        <fragment
+            android:name="com.smusings.rollofthedie.PlayerTwoFragment"
+            android:id="@+id/p2buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
 </LinearLayout>

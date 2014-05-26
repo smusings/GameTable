@@ -3,15 +3,42 @@ package com.smusings.rollofthedie;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.TextView;
 
-public class MagicLifeCounter extends SetUpActivity {
+import java.util.ArrayList;
 
-    private ArrayAdapter<String> aaP1;
-    private ArrayAdapter<String> aaP2;
-    Number player_health=20;
+public class MagicLifeCounter extends SetUpActivity
+    implements PlayerOneFragment.Player1Listener,
+    PlayerTwoFragment.Player2Listener{
+    private ArrayList<String> Player1Press;
+    private ArrayList<String> Player2Press;
+
+
+    public void player1Press (String ph) {
+        int ph1 = Integer.valueOf(ph);
+        if ( ph1 == 0) {
+            player1.setText(Integer.toString(player_health));
+        } else {
+            String phealth = player1.getText().toString();
+            int p1health = Integer.valueOf(phealth);
+            int health = p1health + ph1;
+            player1.setText(Integer.toString(health));
+        }
+    }
+
+    public void player2Press (String ph) {
+        int ph2 = Integer.valueOf(ph);
+        if ( ph2 == 0) {
+            player2.setText(Integer.toString(player_health));
+        } else {
+            String phealth = player2.getText().toString();
+            int p2health = Integer.valueOf(phealth);
+            int health = p2health + ph2;
+            player2.setText(Integer.toString(health));
+        }
+    }
+
+    int player_health=20;
     TextView player1;
     TextView player2;
 
@@ -19,114 +46,19 @@ public class MagicLifeCounter extends SetUpActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.magic_life_counter);
 
+        //set up onCreate
         player1=(TextView) findViewById(R.id.Player1);
         player2=(TextView) findViewById(R.id.Player2);
 
-        player1.setText(player_health.toString());
-        player2.setText(player_health.toString());
+        //sets life to 20 on start
+        player1.setText(Integer.toString(player_health));
+        player2.setText(Integer.toString(player_health));
 
-        //player one buttons
-        Button p1plus1 = (Button) findViewById(R.id.plusOne1);
-        Button p1plus5 = (Button) findViewById(R.id.plusFive1);
-        Button p1minus1 = (Button) findViewById(R.id.minusOne1);
-        Button p1minus5 = (Button) findViewById(R.id.minusFive1);
-        Button p1reset = (Button) findViewById(R.id.player1reset);
+        //reference to UI widgets
 
-        //player two buttons
-        Button p2plus1 = (Button) findViewById(R.id.plusOne2);
-        Button p2plus5 = (Button) findViewById(R.id.plusFive2);
-        Button p2minus1 = (Button) findViewById(R.id.minusOne2);
-        Button p2minus5 = (Button) findViewById(R.id.minusFive2);
-        Button p2reset = (Button) findViewById(R.id.player2reset);
-
-        //player one buttons
-        p1plus1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final String health = player1.getText().toString();
-                final int phealth = Integer.parseInt(health);
-                Number skr=phealth+1;
-                player1.setText(skr.toString());
-            }
-        });
-
-        p1plus5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final String health = player1.getText().toString();
-                final int phealth = Integer.parseInt(health);
-                Number skr=phealth+5;
-                player1.setText(skr.toString());
-            }
-        });
-        p1minus1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final String health = player1.getText().toString();
-                final int phealth = Integer.parseInt(health);
-                Number skr=phealth-1;
-                player1.setText(skr.toString());
-            }
-        });
-        p1minus5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final String health = player1.getText().toString();
-                final int phealth = Integer.parseInt(health);
-                Number skr=phealth-5;
-                player1.setText(skr.toString());
-            }
-        });
-        p1reset.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                player1.setText(player_health.toString());
-            }
-        });
-
-        //Player two buttons
-        p2plus1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final String health = player2.getText().toString();
-                final int phealth = Integer.parseInt(health);
-                Number skr=phealth+1;
-                player2.setText(skr.toString());
-            }
-        });
-        p2plus5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final String health = player2.getText().toString();
-                final int phealth = Integer.parseInt(health);
-                Number skr=phealth+5;
-                player2.setText(skr.toString());
-            }
-        });
-        p2minus1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final String health = player2.getText().toString();
-                final int phealth = Integer.parseInt(health);
-                Number skr=phealth-1;
-                player2.setText(skr.toString());
-            }
-        });
-        p2minus5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final String health = player2.getText().toString();
-                final int phealth = Integer.parseInt(health);
-                Number skr=phealth-5;
-                player2.setText(skr.toString());
-            }
-        });
-        p2reset.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                player2.setText(player_health.toString());
-            }
-        });
+        //create ArrayList
+        Player1Press=new ArrayList<String>();
+        Player2Press=new ArrayList<String>();
     }
 
     public void resetHealth(View view){
@@ -139,8 +71,8 @@ public class MagicLifeCounter extends SetUpActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu_clear:
-                player1.setText(player_health.toString());
-                player2.setText(player_health.toString());
+                player1.setText(Integer.toString(player_health));
+                player2.setText(Integer.toString(player_health));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

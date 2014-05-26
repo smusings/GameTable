@@ -1,26 +1,37 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     tools:context=".MainActivity"
     android:orientation="vertical">
-    <Button
-        android:id="@+id/dieRoll"
-        android:text="Die Roll"
-        android:layout_width="fill_parent"
-        android:layout_height="40dp"
-        android:onClick="dieRoll"
-        android:layout_gravity="center_vertical"
-        android:layout_margin="10dp"
-        android:background="@drawable/marble"/>
-    <Button
-        android:id="@+id/lifeCounter"
-        android:text="Life Counter"
-        android:layout_width="fill_parent"
-        android:layout_height="40dp"
-        android:onClick="lifeCounter"
-        android:layout_gravity="center_vertical"
-        android:background="@drawable/paper"
-        android:layout_margin="10dp"/>
+    <LinearLayout
 
-</LinearLayout>
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/dieRoll"
+            android:text="Die Roll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="dieRoll"
+            android:layout_margin="10dp"
+            android:textColor="@color/White"
+            android:background="@color/Green"
+            android:layout_above="@+id/dieRoll"/>
+        <Button
+            android:layout_below="@+id/dieRoll"
+            android:id="@+id/lifeCounter"
+            android:text="Life Counter"
+            android:textColor="@color/White"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="lifeCounter"
+            android:background="@color/Green"
+            android:layout_margin="10dp"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>

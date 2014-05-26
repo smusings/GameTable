@@ -1,9 +1,9 @@
-Roll of the Die is a die rolling app designed by smusings.
+GameTable is a table top gaming application designed by smusings.
+
 
 **TODO**
 
-add more die and ways to turn some off
-
-**Possible future updates**
-
-1. Magic life counter
+1. Clean up the UI
+2. Add Poison Counter to life counter
+3. Add coin flip
+4. Maybe die roll button to life counter?
