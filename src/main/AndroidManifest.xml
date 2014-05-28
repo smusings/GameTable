@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.smusings.rollofthedie"
-    android:versionCode="2"
-    android:versionName="1.1" >
+    android:versionCode="3"
+    android:versionName="1.2" >
 
     <uses-sdk
         android:minSdkVersion="11"
@@ -12,8 +12,7 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppBaseTheme"
-        android:debuggable="false">
+        android:theme="@style/AppBaseTheme">
         <activity
             android:name="com.smusings.rollofthedie.MainActivity"
             android:label="@string/app_name" >
@@ -37,6 +36,14 @@
         </activity>
         <activity
             android:name=".MagicLifeCounter"
+            android:label="@string/app_name"
+            android:parentActivityName=".SetUpActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".setUpActivity"/>
+        </activity>
+        <activity
+            android:name=".FlipCoin"
             android:label="@string/app_name"
             android:parentActivityName=".SetUpActivity">
             <meta-data

@@ -25,4 +25,8 @@ public class MainActivity extends SetUpActivity{
 
     };
 
+    public void flipCoin(View v){
+       Intent intent=new Intent(this, FlipCoin.class);
+        startActivity(intent);
+    };
 }
