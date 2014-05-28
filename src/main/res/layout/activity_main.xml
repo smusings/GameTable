@@ -38,5 +38,11 @@
             android:onClick="flipCoin"
             android:background="@color/Green"
             android:layout_margin="10dp" />
+        <ImageView
+            android:id="@+id/flipResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:gravity="center"/>
     </LinearLayout>
 </RelativeLayout>

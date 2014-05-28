@@ -3,6 +3,7 @@ package com.smusings.rollofthedie;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
 public class MainActivity extends SetUpActivity{
 
@@ -26,7 +27,12 @@ public class MainActivity extends SetUpActivity{
     };
 
     public void flipCoin(View v){
-       Intent intent=new Intent(this, FlipCoin.class);
-        startActivity(intent);
-    };
+            ImageView cf=(ImageView)findViewById(R.id.flipResult);
+            int flip_coin = (int) Math.ceil(Math.random() * 2);
+            if (flip_coin == 1) {
+                cf.setImageResource(R.drawable.heads);
+            } else {
+                cf.setImageResource(R.drawable.tails);
+            }
+        }
 }
