@@ -3,21 +3,11 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <Button
-        android:id="@+id/twoheadedgiant"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="resetHealth"
-        android:text="set life to 30"
-        android:textColor="@color/White"
-        android:background="@color/DarkBlue"
-        android:layout_margin="5dp"
-        android:layout_gravity="center"/>
     <LinearLayout
         android:id="@+id/mlc_ui"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_gravity="center">
         <fragment
             android:name="com.smusings.rollofthedie.PlayerOneFragment"
@@ -28,9 +18,9 @@
             android:id='@+id/playerHealth1'
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:orientation="horizontal">
+            android:orientation="vertical">
             <LinearLayout
-                android:layout_width="90dp"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_margin="5dp">
@@ -39,11 +29,10 @@
                     android:layout_height="wrap_content"
                     android:text="Player One"
                     android:textColor="@color/DimGray"
-                    android:gravity="center"
                     android:background="@color/Snow"/>
                 <TextView
                     android:id="@+id/Player1"
-                    android:layout_width="100dp"
+                    android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:background="@color/White"
                     android:gravity="center"
@@ -51,31 +40,65 @@
                     android:textSize="32dp"/>
             </LinearLayout>
             <LinearLayout
-                android:layout_width="90dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+                <TextView
+                    android:id="@+id/poison1"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:background="@color/White"
+                    android:textSize="15dp"
+                    android:layout_margin="10dp"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Green"
+                    android:text="Poison"
+                    android:textSize="20dp"
+                    android:background="@color/White"
+                    android:gravity="center"
+                    android:layout_margin="10dp"/>
+                <TextView
+                    android:id="@+id/poison2"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/White"
+                    android:textSize="15dp"
+                    android:text="0"
+                    android:gravity="center"
+                    android:layout_margin="10dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_margin="5dp">
-                <TextView
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Player Two"
-                    android:textColor="@color/DimGray"
-                    android:gravity="center"
-                    android:background="@color/Snow"/>
+
                 <TextView
                     android:id="@+id/Player2"
-                    android:layout_width="100dp"
+                    android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:background="@color/White"
                     android:gravity="center"
                     android:fontFamily="sans-serif-condensed"
                     android:textSize="32dp"/>
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Player Two"
+                    android:textColor="@color/DimGray"
+                    android:background="@color/Snow"
+                    android:gravity="right"/>
             </LinearLayout>
+            <fragment
+                android:name="com.smusings.rollofthedie.PlayerTwoFragment"
+                android:id="@+id/p2buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
-        <fragment
-            android:name="com.smusings.rollofthedie.PlayerTwoFragment"
-            android:id="@+id/p2buttons"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
     </LinearLayout>
 </LinearLayout>

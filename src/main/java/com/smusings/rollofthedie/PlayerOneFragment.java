@@ -19,7 +19,8 @@ public class PlayerOneFragment extends Fragment{
         Button p1plus5 = (Button) view.findViewById(R.id.plusFive1);
         Button p1minus1 = (Button) view.findViewById(R.id.minusOne1);
         Button p1minus5 = (Button) view.findViewById(R.id.minusFive1);
-        Button p1reset = (Button) view.findViewById(R.id.player1reset);
+        Button p1poison1 = (Button) view.findViewById(R.id.poisonOne1);
+        Button p1poisonMin1=(Button) view.findViewById(R.id.poisonMinOne1);
 
         p1plus1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,10 +52,17 @@ public class PlayerOneFragment extends Fragment{
             }
         });
 
-        p1reset.setOnClickListener(new View.OnClickListener() {
+        p1poison1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Number ph=0;
+                Number ph=10;
+                player1Listener.player1Press(ph.toString());
+            }
+        });
+        p1poisonMin1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Number ph=-10;
                 player1Listener.player1Press(ph.toString());
             }
         });

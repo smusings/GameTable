@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-        android:id="@+id/player1buttons">
+    android:id="@+id/player1buttons"
+    android:gravity="center_horizontal">
         <Button
+            style="?android:attr/buttonStyleSmall"
             android:id="@+id/minusOne1"
             android:text="-1"
             android:layout_width="wrap_content"
@@ -13,6 +15,7 @@
             android:background="@color/DarkRed"
             android:layout_margin="5dp"/>
         <Button
+            style="?android:attr/buttonStyleSmall"
             android:id="@+id/minusFive1"
             android:text="-5"
             android:layout_width="wrap_content"
@@ -21,28 +24,39 @@
             android:background="@color/DarkRed"
             android:layout_margin="5dp"/>
         <Button
+            style="?android:attr/buttonStyleSmall"
             android:id="@+id/plusOne1"
             android:text="+1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/White"
-            android:background="@color/Green"
+            android:background="@color/DarkBlue"
             android:layout_margin="5dp"/>
         <Button
+            style="?android:attr/buttonStyleSmall"
             android:id="@+id/plusFive1"
             android:text="+5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/White"
-            android:background="@color/Green"
-            android:layout_margin="5dp" />
+            android:background="@color/DarkBlue"
+            android:layout_margin="5dp"/>
         <Button
-            android:id="@+id/player1reset"
-            android:text="Reset"
+            style="?android:attr/buttonStyleSmall"
+            android:id="@+id/poisonOne1"
+            android:text="P +1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/White"
-            android:background="@color/DarkBlue"
+            android:background="@color/Green"
             android:layout_margin="5dp"/>
-
-</LinearLayout>
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:id="@+id/poisonMinOne1"
+            android:text="P -1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/White"
+            android:background="@color/Green"
+            android:layout_margin="5dp"/>
+    </LinearLayout>
