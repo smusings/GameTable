@@ -29,15 +29,11 @@
             android:onClick="lifeCounter"
             android:background="@color/Green"
             android:layout_margin="10dp"/>
-        <Button
-            android:id="@+id/flipCoin"
-            android:text="Flip Coin"
-            android:textColor="@color/White"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="flipCoin"
-            android:background="@color/Green"
-            android:layout_margin="10dp" />
+        <fragment
+            android:name="com.smusings.rollofthedie.CoinFlipFragment"
+            android:id="@+id/coinflipresult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
         <ImageView
             android:id="@+id/flipResult"
             android:layout_width="match_parent"
