@@ -22,25 +22,26 @@ public class PlayerOneFragment extends Fragment{
         Button p1poison1 = (Button) view.findViewById(R.id.poisonOne1);
         Button p1poisonMin1=(Button) view.findViewById(R.id.poisonMinOne1);
 
+        //sends the number along to an activity
         p1plus1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Number ph=1;
-                player1Listener.player1Press(ph.toString());
+                player1Listener.player1Press(ph);
             }
         });
         p1plus5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Number ph=5;
-                player1Listener.player1Press(ph.toString());
+                player1Listener.player1Press(ph);
             }
         });
         p1minus1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Number ph=(-1);
-                player1Listener.player1Press(ph.toString());
+                player1Listener.player1Press(ph);
             }
         });
 
@@ -48,30 +49,32 @@ public class PlayerOneFragment extends Fragment{
             @Override
             public void onClick(View v) {
                 Number ph=(-5);
-                player1Listener.player1Press(ph.toString());
+                player1Listener.player1Press(ph);
             }
         });
 
+        //string to get rid of confusing logic in activity
         p1poison1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Number ph=10;
-                player1Listener.player1Press(ph.toString());
+                Number pht=1;
+                player1Listener.player1Str(pht.toString());
             }
         });
         p1poisonMin1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Number ph=-10;
-                player1Listener.player1Press(ph.toString());
+                Number pht=-1;
+                player1Listener.player1Str(pht.toString());
             }
         });
         return view;
-
     }
 
+    //takes the number from the buttons above and passes it along to an activity
     public interface Player1Listener{
-        public void player1Press(String ph);
+        public void player1Press(Number ph);
+        public void player1Str(String pht);
     }
 
     private Player1Listener player1Listener;

@@ -14,14 +14,17 @@ public class DieRollFragment extends Fragment {
 	public View onCreateView (LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState){
 		View view=inflater.inflate(R.layout.activity_die_roll_fragment, container, false);
-		
+
+		//the die
 		Button die6=(Button)view.findViewById(R.id.die6);
 		Button die4=(Button)view.findViewById(R.id.die4);
 		Button die8=(Button)view.findViewById(R.id.die8);
 		Button die10=(Button)view.findViewById(R.id.die10);
 		Button die12=(Button)view.findViewById(R.id.die12);
 		Button die20=(Button)view.findViewById(R.id.die20);
-		
+
+        //each button press will roll a number between 1 and what is assigned to it, put that number
+        //into the string and send it via listener to an activity that calls it up
 		die4.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -76,14 +79,11 @@ public class DieRollFragment extends Fragment {
 				
 			}
 		});
-		
-	
-		
-		
 		return view;
-		
 	}
-	
+
+    //the listener that sends it along
+    //the listener locks for a new String message to send to an activity
 	public interface OnNewRollListener{
 		public void onNewRoll(String message);
 	}
@@ -93,7 +93,6 @@ public class DieRollFragment extends Fragment {
 	@Override
 	public void onAttach(Activity activity){
 		super.onAttach(activity);
-		
 		try{
 			onNewRollListener=(OnNewRollListener)activity;
 		} catch (ClassCastException e){

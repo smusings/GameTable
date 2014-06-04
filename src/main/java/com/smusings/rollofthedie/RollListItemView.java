@@ -8,6 +8,8 @@ import android.util.AttributeSet;
 import android.widget.TextView;
 
 public class RollListItemView extends TextView{
+
+    //the roll list item view
 	public RollListItemView(Context context, AttributeSet ats, int ds){
 		super(context, ats, ds);
 		init();
@@ -22,7 +24,8 @@ public class RollListItemView extends TextView{
 		super(context, attrs);
 		init();
 	}
-	
+
+    //sets up how the itemview looks
 	private Paint marginPaint;
 	private Paint linePaint;
 	private int paperColor;

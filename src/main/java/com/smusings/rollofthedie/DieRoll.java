@@ -13,7 +13,6 @@ public class DieRoll extends SetUpActivity
     private ArrayList<String> DieRolls;
 
     public void onNewRoll(String message) {
-
         aa.insert(message, 0);
     }
 

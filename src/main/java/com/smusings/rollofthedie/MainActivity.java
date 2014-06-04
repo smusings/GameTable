@@ -8,6 +8,7 @@ import android.widget.ImageView;
 public class MainActivity extends SetUpActivity
 implements CoinFlipFragment.OnNewFlipListener{
 
+    //logic for coin flips
     public void onNewFlip(String result){
         ImageView cf=(ImageView)findViewById(R.id.flipResult);
         int flip=Integer.parseInt(result);
@@ -19,7 +20,6 @@ implements CoinFlipFragment.OnNewFlipListener{
 
     }
 
-	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

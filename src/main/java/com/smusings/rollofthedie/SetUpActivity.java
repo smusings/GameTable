@@ -8,6 +8,7 @@ import android.view.MenuItem;
 
 public class SetUpActivity extends FragmentActivity {
 
+    //set up activity in order to not repeat code
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
