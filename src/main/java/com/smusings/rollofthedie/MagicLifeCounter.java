@@ -6,7 +6,7 @@ import android.widget.TextView;
 
 public class MagicLifeCounter extends SetUpActivity
     implements PlayerOneFragment.Player1Listener,
-    PlayerTwoFragment.Player2Listener{
+        PlayerTwoFragment.Player2Listener{
 
     //the setup
     int player_health=20;
@@ -15,20 +15,20 @@ public class MagicLifeCounter extends SetUpActivity
     TextView poison1;
     TextView poison2;
 
-    public void player1Press (Number ph) {
+    public void player1Press (Number ph1) {
         //logic for health
-        int ph1 = Integer.valueOf(ph.intValue());
-            String phealth = player1.getText().toString();
-            int p1health = Integer.valueOf(phealth);
-            int health = p1health + ph1;
-            player1.setText(Integer.toString(health));
+        int ph = Integer.valueOf(ph1.intValue());
+        String phealth = player1.getText().toString();
+        int p1health = Integer.valueOf(phealth);
+        int health = p1health + ph;
+        player1.setText(Integer.toString(health));
     }
-    public void player1Str(String pht){
+    public void player1Str(String pht1){
         //logic for poison counters
-        int pht1=Integer.valueOf(pht);
+        int pht=Integer.valueOf(pht1);
         String poison=poison1.getText().toString();
         int p1posion=Integer.valueOf(poison);
-        int poisonV=p1posion+pht1;
+        int poisonV=p1posion+pht;
         poison1.setText(Integer.toString(poisonV));
     }
 
@@ -43,7 +43,7 @@ public class MagicLifeCounter extends SetUpActivity
     public void player2Str(String pht){
         //logic for poison counters
         int pht2=Integer.valueOf(pht);
-        String poison=poison1.getText().toString();
+        String poison=poison2.getText().toString();
         int p2posion=Integer.valueOf(poison);
         int poisonV=p2posion+pht2;
         poison2.setText(Integer.toString(poisonV));
