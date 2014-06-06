@@ -14,8 +14,8 @@ public class About extends FragmentActivity {
         Resources myResources = getResources();
 
         String about = "This app was made and designed by sleepless musings using eclipse." +
-                " All icons, backgrounds, and other images were made using the GIMP editor, and Android Asset Studio." +
-                " Any feedback is appreciated and can be sent to sleeplessmusings@gmail.com";
+                "\nAll icons, backgrounds, and other images were made using the GIMP editor, and Android Asset Studio." +
+                "\n Any feedback is appreciated and can be sent to sleeplessmusings@gmail.com";
 
         // Create the text view
         TextView textView = new TextView(this);

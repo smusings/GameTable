@@ -15,12 +15,12 @@ public class PlayerOneFragment extends Fragment{
         View view=inflater.inflate(R.layout.player_one_buttons, container, false);
 
         //player one buttons
-        Button p1plus1 = (Button) view.findViewById(R.id.plusOne1);
-        Button p1plus5 = (Button) view.findViewById(R.id.plusFive1);
-        Button p1minus1 = (Button) view.findViewById(R.id.minusOne1);
-        Button p1minus5 = (Button) view.findViewById(R.id.minusFive1);
-        Button p1poison1 = (Button) view.findViewById(R.id.poisonOne1);
-        Button p1poisonMin1=(Button) view.findViewById(R.id.poisonMinOne1);
+        Button p1plus1 = (Button) view.findViewById(R.id.plusOne);
+        Button p1plus5 = (Button) view.findViewById(R.id.plusFive);
+        Button p1minus1 = (Button) view.findViewById(R.id.minusOne);
+        Button p1minus5 = (Button) view.findViewById(R.id.minusFive);
+        Button p1poison1 = (Button) view.findViewById(R.id.poisonOne);
+        Button p1poisonMin1=(Button) view.findViewById(R.id.poisonMinOne);
 
         //sends the number along to an activity
         p1plus1.setOnClickListener(new View.OnClickListener() {

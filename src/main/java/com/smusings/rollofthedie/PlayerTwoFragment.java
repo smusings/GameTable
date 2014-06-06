@@ -12,15 +12,15 @@ public class PlayerTwoFragment extends Fragment{
     @Override
     public View onCreateView (LayoutInflater inflater, ViewGroup container,
                               Bundle savedInstanceState){
-        View view=inflater.inflate(R.layout.player_two_buttons, container, false);
+        View view=inflater.inflate(R.layout.player_one_buttons, container, false);
 
         //player one buttons
-        Button p2plus1 = (Button) view.findViewById(R.id.plusOne2);
-        Button p2plus5 = (Button) view.findViewById(R.id.plusFive2);
-        Button p2minus1 = (Button) view.findViewById(R.id.minusOne2);
-        Button p2minus5 = (Button) view.findViewById(R.id.minusFive2);
-        Button p2poison1 = (Button) view.findViewById(R.id.poisonOne2);
-        Button p2poisonMin1=(Button) view.findViewById(R.id.poisonMinOne2);
+        Button p2plus1 = (Button) view.findViewById(R.id.plusOne);
+        Button p2plus5 = (Button) view.findViewById(R.id.plusFive);
+        Button p2minus1 = (Button) view.findViewById(R.id.minusOne);
+        Button p2minus5 = (Button) view.findViewById(R.id.minusFive);
+        Button p2poison1 = (Button) view.findViewById(R.id.poisonOne);
+        Button p2poisonMin1=(Button) view.findViewById(R.id.poisonMinOne);
 
         p2plus1.setOnClickListener(new View.OnClickListener() {
             @Override
