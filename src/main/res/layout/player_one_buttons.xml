@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/player1buttons"
     android:gravity="center_horizontal">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
         <Button
             style="?android:attr/buttonStyleSmall"
             android:id="@+id/minusOne"
             android:text="-1"
-            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/White"
             android:background="@color/DarkRed"
@@ -18,16 +22,22 @@
             style="?android:attr/buttonStyleSmall"
             android:id="@+id/minusFive"
             android:text="-5"
-            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/White"
             android:background="@color/DarkRed"
             android:layout_margin="5dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
         <Button
             style="?android:attr/buttonStyleSmall"
             android:id="@+id/plusOne"
             android:text="+1"
-            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/White"
             android:background="@color/DarkBlue"
@@ -36,16 +46,22 @@
             style="?android:attr/buttonStyleSmall"
             android:id="@+id/plusFive"
             android:text="+5"
-            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/White"
             android:background="@color/DarkBlue"
             android:layout_margin="5dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
         <Button
             style="?android:attr/buttonStyleSmall"
             android:id="@+id/poisonOne"
             android:text="P +1"
-            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/White"
             android:background="@color/Green"
@@ -54,9 +70,12 @@
             style="?android:attr/buttonStyleSmall"
             android:id="@+id/poisonMinOne"
             android:text="P -1"
-            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/White"
             android:background="@color/Green"
             android:layout_margin="5dp"/>
+
     </LinearLayout>
+</LinearLayout>
