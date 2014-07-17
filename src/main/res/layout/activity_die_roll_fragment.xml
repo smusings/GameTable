@@ -12,7 +12,7 @@
         	style="?android:attr/buttonStyleSmall"
         	android:layout_width="wrap_content"
         	android:layout_height="wrap_content"
-            android:padding="20dp"
+            android:padding="10dp"
         	android:text="@string/button_d4"
         	android:onClick="RollD4"
         	android:background="@drawable/ic_action_d4noback"
@@ -22,7 +22,7 @@
 	        style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="20dp"
+            android:padding="10dp"
 	        android:text="@string/button_d6"
 	        android:background="@drawable/ic_action_d6noback"
 	        android:textColor="@color/Black" />    
@@ -31,7 +31,7 @@
 	        style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="20dp"
+            android:padding="10dp"
 	        android:text="@string/button_d8"
 	        android:background="@drawable/ic_action_d8noback"
 	        android:textColor="@color/Black" />
@@ -40,7 +40,7 @@
 	        style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="20dp"
+            android:padding="10dp"
 	        android:text="@string/button_d10"
 	        android:background="@drawable/ic_action_d10noback"
 	        android:textColor="@color/Black"  />
@@ -49,7 +49,7 @@
 	        style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="20dp"
+            android:padding="10dp"
 	        android:text="@string/button_d12"
 	        android:background="@drawable/ic_action_d12noback"
 	        android:textColor="@color/Black" />
@@ -58,7 +58,7 @@
 	        style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="20dp"
+            android:padding="10dp"
 	        android:text="@string/button_d20"
 	        android:background="@drawable/ic_action_d20noback"
 	        android:textColor="@color/Black"  />

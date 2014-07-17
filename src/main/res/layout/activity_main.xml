@@ -20,7 +20,6 @@
             android:background="@color/Green"
             android:layout_above="@+id/dieRoll"/>
         <Button
-            android:layout_below="@+id/dieRoll"
             android:id="@+id/lifeCounter"
             android:text="Life Counter"
             android:textColor="@color/White"
@@ -29,11 +28,15 @@
             android:onClick="lifeCounter"
             android:background="@color/Green"
             android:layout_margin="10dp"/>
-        <fragment
-            android:name="com.smusings.rollofthedie.CoinFlipFragment"
-            android:id="@+id/coinflipresult"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/flipCoin"
+            android:text="Flip Coin"
+            android:textColor="@color/White"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="coinFlip"
+            android:background="@color/Green"
+            android:layout_margin="10dp" />
         <ImageView
             android:id="@+id/flipResult"
             android:layout_width="match_parent"

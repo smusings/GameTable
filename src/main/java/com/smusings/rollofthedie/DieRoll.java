@@ -16,6 +16,8 @@ public class DieRoll extends SetUpActivity
         aa.insert(message, 0);
     }
 
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +46,9 @@ public class DieRoll extends SetUpActivity
         switch (item.getItemId()) {
             case R.id.menu_clear:
                 aa.clear();
+                return true;
+            case android.R.id.home:
+                this.finish();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
