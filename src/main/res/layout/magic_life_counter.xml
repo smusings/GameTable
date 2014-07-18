@@ -29,12 +29,12 @@
         android:layout_height="fill_parent"
         android:orientation="horizontal">
         <fragment
-            android:name="com.smusings.rollofthedie.PlayerOneFragment"
+            android:name="com.smusings.rollofthedie.LifeCounterFragment"
             android:id="@+id/p1buttons"
             android:layout_weight="1"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            tools:layout="@layout/player_one_buttons" />
+            tools:layout="@layout/life_counter_fragment" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -43,11 +43,11 @@
             android:text="|"/>
 
         <fragment
-            android:name="com.smusings.rollofthedie.PlayerOneFragment"
+            android:name="com.smusings.rollofthedie.LifeCounterFragment"
             android:id="@+id/p2buttons"
             android:layout_weight="1"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            tools:layout="@layout/player_one_buttons" />
+            tools:layout="@layout/life_counter_fragment" />
     </LinearLayout>
 </LinearLayout>

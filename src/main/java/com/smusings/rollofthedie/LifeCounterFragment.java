@@ -1,6 +1,6 @@
 package com.smusings.rollofthedie;
 
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,11 +8,11 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class PlayerOneFragment extends Fragment{
+public class LifeCounterFragment extends Fragment{
     @Override
     public View onCreateView (LayoutInflater inflater, ViewGroup container,
                               Bundle savedInstanceState){
-        View view=inflater.inflate(R.layout.player_one_buttons, container, false);
+        View view=inflater.inflate(R.layout.life_counter_fragment, container, false);
 
         //player one buttons
         final TextView playerhealth=(TextView)view.findViewById(R.id.PlayerHealth);
@@ -103,7 +103,16 @@ public class PlayerOneFragment extends Fragment{
                 poisonhealth.setText(Integer.toString(health));
             }
         });
-
         return view;
+    }
+
+    public void resetHealth(){
+        TextView playerhealth=(TextView)getView().findViewById(R.id.PlayerHealth);
+        TextView poisonhealth=(TextView)getView().findViewById(R.id.poison_health);
+
+        Number n=0;
+
+        playerhealth.setText(n.toString());
+        poisonhealth.setText(n.toString());
     }
 }

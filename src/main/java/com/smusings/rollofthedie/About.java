@@ -21,7 +21,6 @@ public class About extends FragmentActivity {
         TextView textView = new TextView(this);
         textView.setTextSize(15);
         textView.setText(about);
-        textView.setTextColor(myResources.getColor(R.color.White));
 
         // Set the text view as the activity layout
         setContentView(textView);
