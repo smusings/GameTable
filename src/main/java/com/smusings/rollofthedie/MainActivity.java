@@ -2,6 +2,7 @@ package com.smusings.rollofthedie;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -33,6 +34,18 @@ public class MainActivity extends SetUpActivity{
         }else if (flip_coin == 2){
 
             cf.setImageResource(R.drawable.tails);
+        }
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch (item.getItemId()){
+            case R.id.menu_clear:
+                ImageView cf=(ImageView)findViewById(R.id.flipResult);
+                cf.setImageResource(0);
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
         }
     }
 

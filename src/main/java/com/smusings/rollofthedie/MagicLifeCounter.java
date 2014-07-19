@@ -23,4 +23,6 @@ public class MagicLifeCounter extends SetUpActivity{
                 return super.onOptionsItemSelected(item);
         }
     }
+
+
 }
