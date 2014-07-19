@@ -14,7 +14,7 @@ public class MagicLifeCounter extends SetUpActivity{
         switch (item.getItemId()) {
             case R.id.menu_clear:
                 LifeCounterFragment f1=(LifeCounterFragment) getSupportFragmentManager().findFragmentById(R.id.p1buttons);
-                LifeCounterFragment f2=(LifeCounterFragment) getSupportFragmentManager().findFragmentById(R.id.p1buttons);
+                LifeCounterFragment f2=(LifeCounterFragment) getSupportFragmentManager().findFragmentById(R.id.p2buttons);
 
                 f1.resetHealth();
                 f2.resetHealth();

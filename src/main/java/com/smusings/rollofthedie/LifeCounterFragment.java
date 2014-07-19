@@ -110,9 +110,10 @@ public class LifeCounterFragment extends Fragment{
         TextView playerhealth=(TextView)getView().findViewById(R.id.PlayerHealth);
         TextView poisonhealth=(TextView)getView().findViewById(R.id.poison_health);
 
-        Number n=0;
+        Number health=20;
+        Number poison=0;
 
-        playerhealth.setText(n.toString());
-        poisonhealth.setText(n.toString());
+        playerhealth.setText(health.toString());
+        poisonhealth.setText(poison.toString());
     }
 }
