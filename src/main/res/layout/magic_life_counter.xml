@@ -29,7 +29,7 @@
         android:layout_height="fill_parent"
         android:orientation="horizontal">
         <fragment
-            android:name="com.smusings.rollofthedie.LifeCounterFragment"
+            android:name="com.smusings.rollofthedie.Player1LifeCounterFragment"
             android:id="@+id/p1buttons"
             android:layout_weight="1"
             android:layout_width="fill_parent"
@@ -43,7 +43,7 @@
             android:text="|"/>
 
         <fragment
-            android:name="com.smusings.rollofthedie.LifeCounterFragment"
+            android:name="com.smusings.rollofthedie.Player2LifeCounterFragment"
             android:id="@+id/p2buttons"
             android:layout_weight="1"
             android:layout_width="fill_parent"

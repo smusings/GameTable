@@ -85,16 +85,6 @@
         android:layout_height="wrap_content">
         <Button
             style="?android:attr/buttonStyleSmall"
-            android:id="@+id/poisonOne"
-            android:text="P +1"
-            android:layout_weight="1"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/White"
-            android:background="@color/Green"
-            android:layout_margin="5dp"/>
-        <Button
-            style="?android:attr/buttonStyleSmall"
             android:id="@+id/poisonMinOne"
             android:text="P -1"
             android:layout_weight="1"
@@ -103,6 +93,15 @@
             android:textColor="@color/White"
             android:background="@color/Green"
             android:layout_margin="5dp"/>
-
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:id="@+id/poisonOne"
+            android:text="P +1"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/White"
+            android:background="@color/Green"
+            android:layout_margin="5dp"/>
     </LinearLayout>
 </LinearLayout>

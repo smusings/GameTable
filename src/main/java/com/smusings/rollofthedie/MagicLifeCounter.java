@@ -13,8 +13,8 @@ public class MagicLifeCounter extends SetUpActivity{
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu_clear:
-                LifeCounterFragment f1=(LifeCounterFragment) getSupportFragmentManager().findFragmentById(R.id.p1buttons);
-                LifeCounterFragment f2=(LifeCounterFragment) getSupportFragmentManager().findFragmentById(R.id.p2buttons);
+                Player1LifeCounterFragment f1=(Player1LifeCounterFragment) getSupportFragmentManager().findFragmentById(R.id.p1buttons);
+                Player1LifeCounterFragment f2=(Player1LifeCounterFragment) getSupportFragmentManager().findFragmentById(R.id.p2buttons);
 
                 f1.resetHealth();
                 f2.resetHealth();

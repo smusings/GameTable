@@ -1,5 +1,6 @@
 package com.smusings.rollofthedie;
 
+import android.content.SharedPreferences;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,7 +9,25 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class LifeCounterFragment extends Fragment{
+public class Player1LifeCounterFragment extends Fragment{
+
+    public static final String PREF_COUNT1="MyPrefsCount1";
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState){
+        super.onActivityCreated(savedInstanceState);
+
+        TextView playerhealth=(TextView)getView().findViewById(R.id.PlayerHealth);
+        TextView poisonhealth=(TextView)getView().findViewById(R.id.poison_health);
+
+        SharedPreferences pref=getActivity().getSharedPreferences(PREF_COUNT1, 0);
+        String health1=pref.getString("health1", "20");
+        String poison1=pref.getString("poison1", "0");
+        playerhealth.setText(health1);
+        poisonhealth.setText(poison1);
+    }
+
+
     @Override
     public View onCreateView (LayoutInflater inflater, ViewGroup container,
                               Bundle savedInstanceState){
@@ -115,5 +134,20 @@ public class LifeCounterFragment extends Fragment{
 
         playerhealth.setText(health.toString());
         poisonhealth.setText(poison.toString());
+    }
+
+    public void onPause(){
+        super.onPause();
+
+
+        TextView playerhealth=(TextView)getView().findViewById(R.id.PlayerHealth);
+        TextView poisonhealth=(TextView)getView().findViewById(R.id.poison_health);
+
+        SharedPreferences pref=getActivity().getSharedPreferences(PREF_COUNT1, 0);
+        SharedPreferences.Editor edt=pref.edit();
+        edt.putString("health1", playerhealth.getText().toString());
+        edt.putString("poison1", poisonhealth.getText().toString());
+
+        edt.commit();
     }
 }
