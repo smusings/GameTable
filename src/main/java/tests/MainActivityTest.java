@@ -4,17 +4,16 @@ import android.app.Instrumentation;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.TouchUtils;
 import android.test.suitebuilder.annotation.MediumTest;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.smusings.rollofthedie.DieRoll;
 import com.smusings.rollofthedie.MagicLifeCounter;
 import com.smusings.rollofthedie.MainActivity;
 import com.smusings.rollofthedie.R;
 
 
-public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActivity> {
+public class MainActivityTest
+        extends ActivityInstrumentationTestCase2<MainActivity> {
 
     MainActivity mMainActivity;
     Button mMagic;
@@ -31,8 +30,8 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
         super.setUp();
 
         mMainActivity=getActivity();
-        mMagic=(Button)mMainActivity.findViewById(R.id.dieRoll);
-        mDie=(Button)mMainActivity.findViewById(R.id.lifeCounter);
+        mMagic=(Button)mMainActivity.findViewById(R.id.lifeCounter);
+        mDie=(Button)mMainActivity.findViewById(R.id.dieRoll);
         mFlip=(Button)mMainActivity.findViewById(R.id.flipCoin);
         mFlipResult=(ImageView)mMainActivity.findViewById(R.id.flipResult);
     }
@@ -45,15 +44,11 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
         assertNotNull("Flip result is null", mFlipResult);
     }
 
-
-    @MediumTest
-    public void verifyshowFlipResult(){
-        TouchUtils.clickView(this, mFlip);
-        assertTrue(View.VISIBLE==mFlipResult.getVisibility());
-    }
-
+    /*
     @MediumTest
     public void testToLaunchDie(){
+
+        final Button mDie=(Button)mMainActivity.findViewById(R.id.dieRoll);
         Instrumentation.ActivityMonitor dieRollActivityMonitor=
                 getInstrumentation().addMonitor(DieRoll.class.getName(),
                         null, false);
@@ -72,10 +67,11 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 
         assertEquals("Activity is wrong",
                 DieRoll.class, dieRollActivity.getClass());
-        */
+        *//*
         //remove the activity monitor
         getInstrumentation().removeMonitor(dieRollActivityMonitor);
     }
+    */
 
     @MediumTest
     public void testToLaunchLife(){
