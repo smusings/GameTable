@@ -4,12 +4,8 @@
     android:versionCode="6"
     android:versionName="2.0" >
 
-    <uses-sdk
-        android:minSdkVersion="11"
-        android:targetSdkVersion="19" />
 
     <application
-        android:debuggable="true"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
@@ -23,14 +19,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name="com.smusings.rollofthedie.DieRollFragment"
-            android:label="@string/title_activity_die_roll_fragment" >
-        </activity>
-        <activity
-            android:name="com.smusings.rollofthedie.RollListFragment"
-            android:label="@string/title_activity_roll_list_fragment" >
         </activity>
         <activity
             android:name="com.smusings.rollofthedie.About"

@@ -17,8 +17,7 @@
             android:onClick="dieRoll"
             android:layout_margin="10dp"
             android:textColor="@color/White"
-            android:background="@color/Green"
-            android:layout_above="@+id/dieRoll"/>
+            android:background="@color/Green"/>
         <Button
             android:id="@+id/lifeCounter"
             android:text="Life Counter"
