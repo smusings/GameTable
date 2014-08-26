@@ -56,33 +56,24 @@ public class Player2LifeCounterFragment extends Fragment{
         p1plus1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Number ph1=1;
-                int ph = Integer.valueOf(ph1.intValue());
-                String phealth = playerhealth.getText().toString();
-                int p1health = Integer.valueOf(phealth);
-                int health = p1health + ph;
+                int p1health = Integer.valueOf(playerhealth.getText().toString());
+                int health = p1health + 1;
                 playerhealth.setText(Integer.toString(health));
             }
         });
         p1plus5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Number ph1=5;
-                int ph = Integer.valueOf(ph1.intValue());
-                String phealth = playerhealth.getText().toString();
-                int p1health = Integer.valueOf(phealth);
-                int health = p1health + ph;
+                int p1health = Integer.valueOf(playerhealth.getText().toString());
+                int health = p1health + 5;
                 playerhealth.setText(Integer.toString(health));
             }
         });
         p1minus1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Number ph1=(-1);
-                int ph = Integer.valueOf(ph1.intValue());
-                String phealth = playerhealth.getText().toString();
-                int p1health = Integer.valueOf(phealth);
-                int health = p1health + ph;
+                int p1health = Integer.valueOf(playerhealth.getText().toString());
+                int health = p1health - 1;
                 playerhealth.setText(Integer.toString(health));
             }
         });
@@ -90,11 +81,8 @@ public class Player2LifeCounterFragment extends Fragment{
         p1minus5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Number ph1=(-5);
-                int ph = Integer.valueOf(ph1.intValue());
-                String phealth = playerhealth.getText().toString();
-                int p1health = Integer.valueOf(phealth);
-                int health = p1health + ph;
+                int p1health = Integer.valueOf(playerhealth.getText().toString());
+                int health = p1health - 5;
                 playerhealth.setText(Integer.toString(health));
             }
         });
@@ -103,22 +91,16 @@ public class Player2LifeCounterFragment extends Fragment{
         p1poison1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Number pht1=1;
-                int ph = Integer.valueOf(pht1.intValue());
-                String poisonh = poisonhealth.getText().toString();
-                int p1health = Integer.valueOf(poisonh);
-                int health = p1health + ph;
+                int p1health = Integer.valueOf(poisonhealth.getText().toString());
+                int health = p1health + 1;
                 poisonhealth.setText(Integer.toString(health));
             }
         });
         p1poisonMin1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Number pht1=-1;
-                int ph = Integer.valueOf(pht1.intValue());
-                String poisonh = poisonhealth.getText().toString();
-                int p1health = Integer.valueOf(poisonh);
-                int health = p1health + ph;
+                int p1health = Integer.valueOf(poisonhealth.getText().toString());
+                int health = p1health - 1;
                 poisonhealth.setText(Integer.toString(health));
             }
         });
