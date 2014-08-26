@@ -9,6 +9,13 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 public class DieRollFragment extends Fragment {
+
+    public Button die4;
+    public Button die6;
+    public Button die8;
+    public Button die10;
+    public Button die12;
+    public Button die20;
 	
 	@Override
 	public View onCreateView (LayoutInflater inflater, ViewGroup container,
@@ -16,12 +23,12 @@ public class DieRollFragment extends Fragment {
 		View view=inflater.inflate(R.layout.activity_die_roll_fragment, container, false);
 
 		//the die
-		Button die6=(Button)view.findViewById(R.id.die6);
-		Button die4=(Button)view.findViewById(R.id.die4);
-		Button die8=(Button)view.findViewById(R.id.die8);
-		Button die10=(Button)view.findViewById(R.id.die10);
-		Button die12=(Button)view.findViewById(R.id.die12);
-		Button die20=(Button)view.findViewById(R.id.die20);
+		die6=(Button)view.findViewById(R.id.die6);
+		die4=(Button)view.findViewById(R.id.die4);
+		die8=(Button)view.findViewById(R.id.die8);
+		die10=(Button)view.findViewById(R.id.die10);
+		die12=(Button)view.findViewById(R.id.die12);
+		die20=(Button)view.findViewById(R.id.die20);
 
         //each button press will roll a number between 1 and what is assigned to it, put that number
         //into the string and send it via listener to an activity that calls it up

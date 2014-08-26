@@ -7,6 +7,7 @@ import android.test.suitebuilder.annotation.MediumTest;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.smusings.rollofthedie.DieRoll;
 import com.smusings.rollofthedie.MagicLifeCounter;
 import com.smusings.rollofthedie.MainActivity;
 import com.smusings.rollofthedie.R;
@@ -44,7 +45,8 @@ public class MainActivityTest
         assertNotNull("Flip result is null", mFlipResult);
     }
 
-    /*
+    //find a way to go back to main activity
+
     @MediumTest
     public void testToLaunchDie(){
 
@@ -61,17 +63,22 @@ public class MainActivityTest
         assertEquals("Monitor for Die Roll has not been called",
                 1,dieRollActivityMonitor.getHits());
 
+
+
+
+
+
         /*
         known issue, commenting it out for now
         getting an error with the getClass()
 
         assertEquals("Activity is wrong",
                 DieRoll.class, dieRollActivity.getClass());
-        *//*
+        */
         //remove the activity monitor
         getInstrumentation().removeMonitor(dieRollActivityMonitor);
     }
-    */
+
 
     @MediumTest
     public void testToLaunchLife(){
