@@ -25,6 +25,8 @@ public class MagicLifeCounterTest
     protected void setUp() throws Exception{
         super.setUp();
 
+        setActivityInitialTouchMode(true);
+
         mMagicLC=getActivity();
         mP1LifeCounter=mMagicLC.player1LC;
         mP2LifeCounter=mMagicLC.player2LC;
@@ -37,7 +39,7 @@ public class MagicLifeCounterTest
     }
 
     @MediumTest
-    public void testMinusOne(){
+    public void testPlusOne(){
         TextView tv1=mP1LifeCounter.playerhealth;
         Button add1p1=mP1LifeCounter.p1plus1;
 
@@ -47,5 +49,18 @@ public class MagicLifeCounterTest
 
         TouchUtils.clickView(this, add1p1);
         assertEquals(str,tv1.getText());
+    }
+
+    @MediumTest
+    public void testPlusTwo(){
+        TextView tv2=mP2LifeCounter.playerhealth;
+        Button add1p2=mP2LifeCounter.p2plus1;
+
+        int p1health = Integer.valueOf(tv2.getText().toString());
+        int health = p1health + 1;
+        String str=Integer.toString(health);
+
+        TouchUtils.clickView(this, add1p2);
+        assertEquals(str,tv2.getText());
     }
 }

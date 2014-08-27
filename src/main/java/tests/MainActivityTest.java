@@ -65,9 +65,6 @@ public class MainActivityTest
 
 
 
-
-
-
         /*
         known issue, commenting it out for now
         getting an error with the getClass()
@@ -77,6 +74,7 @@ public class MainActivityTest
         */
         //remove the activity monitor
         getInstrumentation().removeMonitor(dieRollActivityMonitor);
+        dieRollActivity.finish();
     }
 
 
@@ -96,8 +94,11 @@ public class MainActivityTest
         assertEquals("Activity is wrong",
                 MagicLifeCounter.class, lifeCounterActivity.getClass());
 
+
+
         //remove the activity monitor
         getInstrumentation().removeMonitor(lifeActivityMonitor);
+        lifeCounterActivity.finish();
 
     }
 

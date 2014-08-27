@@ -16,6 +16,7 @@ public class DieRoll extends SetUpActivity
     public DieRollFragment dieRollFragment;
     public String skr;
 
+
     public void onNewRoll(String message) {
         //skr is for testing purposes
         String skr=message;

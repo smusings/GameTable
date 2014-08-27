@@ -36,6 +36,8 @@ public class DieRollTest
         assertNotNull("List is null", mRollListFrag);
     }
 
+    //need to find a way to intercept the string and find out what it is going to be
+
     @MediumTest
     public void testButton4(){
         Button d4frag=mDieRollFrag.die4;
