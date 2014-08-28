@@ -9,6 +9,7 @@ import android.widget.TextView;
 import com.smusings.rollofthedie.MagicLifeCounter;
 import com.smusings.rollofthedie.Player1LifeCounterFragment;
 import com.smusings.rollofthedie.Player2LifeCounterFragment;
+import com.smusings.rollofthedie.R;
 
 public class MagicLifeCounterTest
         extends ActivityInstrumentationTestCase2<MagicLifeCounter> {
@@ -39,7 +40,7 @@ public class MagicLifeCounterTest
     }
 
     @MediumTest
-    public void testPlusOne(){
+    public void testPlusOne_PlayerOne(){
         TextView tv1=mP1LifeCounter.playerhealth;
         Button add1p1=mP1LifeCounter.p1plus1;
 
@@ -52,7 +53,7 @@ public class MagicLifeCounterTest
     }
 
     @MediumTest
-    public void testPlusTwo(){
+    public void testPlusOne_PlayerTwo(){
         TextView tv2=mP2LifeCounter.playerhealth;
         Button add1p2=mP2LifeCounter.p2plus1;
 
@@ -62,5 +63,16 @@ public class MagicLifeCounterTest
 
         TouchUtils.clickView(this, add1p2);
         assertEquals(str,tv2.getText());
+    }
+
+    @MediumTest
+    public void testMenuReset(){
+
+        TextView tv1=mP1LifeCounter.playerhealth;
+        TextView tv2=mP2LifeCounter.playerhealth;
+
+        getInstrumentation().invokeMenuActionSync(mMagicLC, R.id.menu_clear, 0);
+        assertEquals("20", tv1.getText().toString());
+        assertEquals("20", tv2.getText().toString());
     }
 }

@@ -17,7 +17,7 @@ public class MagicLifeCounter extends SetUpActivity{
         player2LC=(Player2LifeCounterFragment) getSupportFragmentManager().findFragmentById(R.id.p2buttons);
     }
 
-
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu_clear:
