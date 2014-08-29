@@ -25,7 +25,6 @@ public class MagicLifeCounterTest
     @Override
     protected void setUp() throws Exception{
         super.setUp();
-
         setActivityInitialTouchMode(true);
 
         mMagicLC=getActivity();

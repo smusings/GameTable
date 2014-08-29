@@ -94,8 +94,6 @@ public class MainActivityTest
         assertEquals("Activity is wrong",
                 MagicLifeCounter.class, lifeCounterActivity.getClass());
 
-
-
         //remove the activity monitor
         getInstrumentation().removeMonitor(lifeActivityMonitor);
         lifeCounterActivity.finish();

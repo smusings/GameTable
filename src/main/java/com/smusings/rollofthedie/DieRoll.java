@@ -14,14 +14,19 @@ public class DieRoll extends SetUpActivity
     public ArrayList<String> DieRolls;
     public RollListFragment rollListFragment;
     public DieRollFragment dieRollFragment;
-    public String skr;
+    public String rollResult=new String();
 
 
     public void onNewRoll(String message) {
         //skr is for testing purposes
-        String skr=message;
+        rollResult=message;
         aa.insert(message, 0);
     }
+
+    public String skree(){
+        return rollResult;
+    }
+
 
 
 
