@@ -45,8 +45,6 @@ public class MainActivityTest
         assertNotNull("Flip result is null", mFlipResult);
     }
 
-    //find a way to go back to main activity
-
     @MediumTest
     public void testToLaunchDie(){
 
@@ -97,7 +95,14 @@ public class MainActivityTest
         //remove the activity monitor
         getInstrumentation().removeMonitor(lifeActivityMonitor);
         lifeCounterActivity.finish();
+    }
 
+    @MediumTest
+    public void testCoinFlip(){
+        //error for some reason, but the button is pressed anyway?
+        TouchUtils.clickView(this, mFlip);
+        assertNotNull("Flip Result null", mFlipResult);
+        assertTrue("Is not equal", mFlipResult.equals(R.drawable.heads) || mFlipResult.equals(R.drawable.tails));
     }
 
 }
