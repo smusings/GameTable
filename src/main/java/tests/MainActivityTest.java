@@ -1,6 +1,7 @@
 package tests;
 
 import android.app.Instrumentation;
+import android.graphics.drawable.Drawable;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.TouchUtils;
 import android.test.suitebuilder.annotation.MediumTest;
@@ -99,10 +100,18 @@ public class MainActivityTest
 
     @MediumTest
     public void testCoinFlip(){
-        //error for some reason, but the button is pressed anyway?
+
         TouchUtils.clickView(this, mFlip);
+
+        Drawable mHeads=mMainActivity.getResources().getDrawable(R.drawable.heads);
+        Drawable mTails=mMainActivity.getResources().getDrawable(R.drawable.tails);
+
         assertNotNull("Flip Result null", mFlipResult);
-        assertTrue("Is not equal", mFlipResult.equals(R.drawable.heads) || mFlipResult.equals(R.drawable.tails));
+
+        //how can i make this work?!
+        assertEquals(mHeads, mFlipResult.getDrawable());
+        assertEquals(mTails, mFlipResult.getDrawable());
+
     }
 
 }
