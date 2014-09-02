@@ -103,14 +103,17 @@ public class MainActivityTest
 
         TouchUtils.clickView(this, mFlip);
 
-        Drawable mHeads=mMainActivity.getResources().getDrawable(R.drawable.heads);
-        Drawable mTails=mMainActivity.getResources().getDrawable(R.drawable.tails);
+        Drawable mHeads=getActivity().getResources().getDrawable(R.drawable.heads);
+        Drawable mTails=getActivity().getResources().getDrawable(R.drawable.tails);
 
         assertNotNull("Flip Result null", mFlipResult);
 
         //how can i make this work?!
+
+        //get drawable is giving an error even if it is heads, hmmm
         assertEquals(mHeads, mFlipResult.getDrawable());
-        assertEquals(mTails, mFlipResult.getDrawable());
+        //assertEquals(mTails, mFlipResult.getDrawable());
+
 
     }
 

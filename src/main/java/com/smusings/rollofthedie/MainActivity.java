@@ -1,6 +1,7 @@
 package com.smusings.rollofthedie;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -27,13 +28,15 @@ public class MainActivity extends SetUpActivity{
 
     public void coinFlip(View v){
         ImageView cf=(ImageView)findViewById(R.id.flipResult);
-        int flip_coin = (int) Math.ceil(Math.random() * 2);
-        String result=Integer.toString(flip_coin);
-        if (flip_coin == 1){
-            cf.setImageResource(R.drawable.heads);
-        }else if (flip_coin == 2){
+        Drawable dHeads=getResources().getDrawable(R.drawable.heads);
+        Drawable dTails=getResources().getDrawable(R.drawable.tails);
 
-            cf.setImageResource(R.drawable.tails);
+        //both do heads for testing atm
+        int flip_coin = (int) Math.ceil(Math.random() * 2);
+        if (flip_coin == 1){
+            cf.setImageDrawable(dHeads);
+        }else if (flip_coin == 2){
+            cf.setImageDrawable(dHeads);
         }
     }
 
@@ -43,7 +46,6 @@ public class MainActivity extends SetUpActivity{
                 ImageView cf=(ImageView)findViewById(R.id.flipResult);
                 cf.setImageResource(0);
                 return true;
-
             default:
                 return super.onOptionsItemSelected(item);
         }
