@@ -42,11 +42,11 @@ public class DieRollTest
     public void testButton4(){
         Button d4frag=mDieRollFrag.die4;
         ArrayAdapter<String> aafrag=mDieRoll.aa;
-        String skree=mDieRoll.skree();
+        String skree="Your four sided die roll came up";
 
 
         TouchUtils.clickView(this, d4frag);
-        assertEquals(skree, aafrag.getItem(0));
+        assertTrue(skree, aafrag.getItem(0).contains(skree));
 
     }
 }
