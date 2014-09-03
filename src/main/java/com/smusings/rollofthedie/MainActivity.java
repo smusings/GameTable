@@ -10,10 +10,10 @@ import android.widget.ImageView;
 public class MainActivity extends SetUpActivity{
 
     @Override
-	public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-	}
+    }
 
     public void lifeCounter(View v){
         Intent intent = new Intent(this, MagicLifeCounter.class);
