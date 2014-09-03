@@ -9,16 +9,14 @@ import android.widget.ImageView;
 
 public class MainActivity extends SetUpActivity{
 
-
-
-	@Override
+    @Override
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 	}
 
     public void lifeCounter(View v){
-        Intent intent=new Intent(this, MagicLifeCounter.class);
+        Intent intent = new Intent(this, MagicLifeCounter.class);
         startActivity(intent);
     };
 
@@ -28,9 +26,9 @@ public class MainActivity extends SetUpActivity{
     };
 
     public void coinFlip(View v){
-        ImageView cf=(ImageView)findViewById(R.id.flipResult);
-        Drawable dHeads=getResources().getDrawable(R.drawable.heads);
-        Drawable dTails=getResources().getDrawable(R.drawable.tails);
+        ImageView cf = (ImageView)findViewById(R.id.flipResult);
+        Drawable dHeads = getResources().getDrawable(R.drawable.heads);
+        Drawable dTails = getResources().getDrawable(R.drawable.tails);
 
         //both do heads for testing atm
         int flip_coin = (int) Math.ceil(Math.random() * 2);
@@ -47,7 +45,7 @@ public class MainActivity extends SetUpActivity{
     public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()){
             case R.id.menu_clear:
-                ImageView cf=(ImageView)findViewById(R.id.flipResult);
+                ImageView cf = (ImageView)findViewById(R.id.flipResult);
                 cf.setImageResource(0);
                 return true;
             default:
