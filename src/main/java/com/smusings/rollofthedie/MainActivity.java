@@ -12,7 +12,8 @@ public class MainActivity extends SetUpActivity{
 
 
 	@Override
-	public void onCreate(Bundle savedInstanceState) {		super.onCreate(savedInstanceState);
+	public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 	}
 
@@ -22,7 +23,7 @@ public class MainActivity extends SetUpActivity{
     };
 
     public void dieRoll(View v){
-        Intent intent=new Intent(this, DieRoll.class);
+        Intent intent = new Intent(this, DieRoll.class);
         startActivity(intent);
     };
 
@@ -36,7 +37,8 @@ public class MainActivity extends SetUpActivity{
         if (flip_coin == 1){
             cf.setImageDrawable(dHeads);
             cf.setTag(R.drawable.heads);
-        }else if (flip_coin == 2){
+        }
+        else if (flip_coin == 2) {
             cf.setImageDrawable(dTails);
             cf.setTag(R.drawable.tails);
         }
