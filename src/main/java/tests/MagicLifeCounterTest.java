@@ -27,9 +27,9 @@ public class MagicLifeCounterTest
         super.setUp();
         setActivityInitialTouchMode(true);
 
-        mMagicLC=getActivity();
-        mP1LifeCounter=mMagicLC.player1LC;
-        mP2LifeCounter=mMagicLC.player2LC;
+        mMagicLC = getActivity();
+        mP1LifeCounter = mMagicLC.player1LC;
+        mP2LifeCounter = mMagicLC.player2LC;
     }
 
     public void testPreconditions(){
@@ -40,35 +40,35 @@ public class MagicLifeCounterTest
 
     @MediumTest
     public void testPlusOne_PlayerOne(){
-        TextView tv1=mP1LifeCounter.playerhealth;
-        Button add1p1=mP1LifeCounter.p1plus1;
+        TextView tv1 = mP1LifeCounter.playerhealth;
+        Button add1p1 = mP1LifeCounter.p1plus1;
 
         int p1health = Integer.valueOf(tv1.getText().toString());
         int health = p1health + 1;
-        String str=Integer.toString(health);
+        String str = Integer.toString(health);
 
         TouchUtils.clickView(this, add1p1);
-        assertEquals(str,tv1.getText());
+        assertEquals(str, tv1.getText());
     }
 
     @MediumTest
     public void testPlusOne_PlayerTwo(){
-        TextView tv2=mP2LifeCounter.playerhealth;
-        Button add1p2=mP2LifeCounter.p2plus1;
+        TextView tv2 = mP2LifeCounter.playerhealth;
+        Button add1p2 = mP2LifeCounter.p2plus1;
 
         int p1health = Integer.valueOf(tv2.getText().toString());
         int health = p1health + 1;
-        String str=Integer.toString(health);
+        String str = Integer.toString(health);
 
         TouchUtils.clickView(this, add1p2);
         assertEquals(str,tv2.getText());
     }
-
+=
     @MediumTest
     public void testMenuReset(){
 
-        TextView tv1=mP1LifeCounter.playerhealth;
-        TextView tv2=mP2LifeCounter.playerhealth;
+        TextView tv1 = mP1LifeCounter.playerhealth;
+        TextView tv2 = mP2LifeCounter.playerhealth;
 
         getInstrumentation().invokeMenuActionSync(mMagicLC, R.id.menu_clear, 0);
         assertEquals("20", tv1.getText().toString());

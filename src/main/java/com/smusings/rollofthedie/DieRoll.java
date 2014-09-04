@@ -14,21 +14,12 @@ public class DieRoll extends SetUpActivity
     public ArrayList<String> DieRolls;
     public RollListFragment rollListFragment;
     public DieRollFragment dieRollFragment;
-    public String rollResult=new String();
 
 
     public void onNewRoll(String message) {
         //skr is for testing purposes
-        rollResult=message;
         aa.insert(message, 0);
     }
-
-    public String skree(){
-        return rollResult;
-    }
-
-
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -36,10 +27,10 @@ public class DieRoll extends SetUpActivity
         setContentView(R.layout.die_roll);
 
         //references to UI widgets
-        FragmentManager fm=getSupportFragmentManager();
+        FragmentManager fm = getSupportFragmentManager();
         rollListFragment =
                 (RollListFragment) fm.findFragmentById(R.id.RollListFrag);
-        dieRollFragment=
+        dieRollFragment =
                 (DieRollFragment) fm.findFragmentById(R.id.DieRollFrag);
 
         //Create the array list

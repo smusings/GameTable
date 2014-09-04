@@ -1,11 +1,14 @@
 package tests;
 
+import android.app.Instrumentation;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.TouchUtils;
 import android.test.suitebuilder.annotation.MediumTest;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.smusings.rollofthedie.DieRoll;
+import com.smusings.rollofthedie.MagicLifeCounter;
 import com.smusings.rollofthedie.MainActivity;
 import com.smusings.rollofthedie.R;
 
@@ -27,11 +30,11 @@ public class MainActivityTest
     protected void setUp() throws Exception{
         super.setUp();
 
-        mMainActivity=getActivity();
-        mMagic=(Button)mMainActivity.findViewById(R.id.lifeCounter);
-        mDie=(Button)mMainActivity.findViewById(R.id.dieRoll);
-        mFlip=(Button)mMainActivity.findViewById(R.id.flipCoin);
-        mFlipResult=(ImageView)mMainActivity.findViewById(R.id.flipResult);
+        mMainActivity = getActivity();
+        mMagic = (Button)mMainActivity.findViewById(R.id.lifeCounter);
+        mDie = (Button)mMainActivity.findViewById(R.id.dieRoll);
+        mFlip = (Button)mMainActivity.findViewById(R.id.flipCoin);
+        mFlipResult = (ImageView)mMainActivity.findViewById(R.id.flipResult);
     }
 
     public void testPreconditions(){
@@ -41,19 +44,20 @@ public class MainActivityTest
         assertNotNull("Flip is null", mFlip);
         assertNotNull("Flip result is null", mFlipResult);
     }
-/*
+
     @MediumTest
     public void testToLaunchDie(){
 
-        final Button mDie=(Button)mMainActivity.findViewById(R.id.dieRoll);
-        Instrumentation.ActivityMonitor dieRollActivityMonitor=
+        final Button mDie = (Button)mMainActivity.findViewById(R.id.dieRoll);
+        Instrumentation.ActivityMonitor dieRollActivityMonitor =
                 getInstrumentation().addMonitor(DieRoll.class.getName(),
                         null, false);
 
         //validate DieRoll started
         TouchUtils.clickView(this, mDie);
-        DieRoll dieRollActivity=(DieRoll)
+        DieRoll dieRollActivity = (DieRoll)
                 dieRollActivityMonitor.waitForActivityWithTimeout(5000);
+
         assertNotNull("Die Roll null", dieRollActivity);
         assertEquals("Monitor for Die Roll has not been called",
                 1,dieRollActivityMonitor.getHits());
@@ -66,7 +70,8 @@ public class MainActivityTest
 
         assertEquals("Activity is wrong",
                 DieRoll.class, dieRollActivity.getClass());
-        *//*
+        */
+
         //remove the activity monitor
         getInstrumentation().removeMonitor(dieRollActivityMonitor);
         dieRollActivity.finish();
@@ -81,8 +86,9 @@ public class MainActivityTest
 
         //validate DieRoll started
         TouchUtils.clickView(this, mMagic);
-        MagicLifeCounter lifeCounterActivity=(MagicLifeCounter)
+        MagicLifeCounter lifeCounterActivity = (MagicLifeCounter)
                 lifeActivityMonitor.waitForActivityWithTimeout(5000);
+
         assertNotNull("Life Counter null", lifeCounterActivity);
         assertEquals("Monitor for LifeCounter has not been called",
                 1,lifeActivityMonitor.getHits());
@@ -93,7 +99,7 @@ public class MainActivityTest
         getInstrumentation().removeMonitor(lifeActivityMonitor);
         lifeCounterActivity.finish();
     }
-*/
+
     @MediumTest
     public void testCoinFlip(){
 
@@ -101,7 +107,7 @@ public class MainActivityTest
 
         assertNotNull("Flip Result null", mFlipResult);
 
-        Integer iDraw=(Integer) mFlipResult.getTag();
+        Integer iDraw = (Integer) mFlipResult.getTag();
         switch(iDraw){
             case R.drawable.heads:
                 assertEquals(R.drawable.heads, mFlipResult.getTag());
@@ -113,5 +119,4 @@ public class MainActivityTest
                 break;
         }
     }
-
 }

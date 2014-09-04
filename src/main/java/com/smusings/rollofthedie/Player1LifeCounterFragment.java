@@ -11,18 +11,18 @@ import android.widget.TextView;
 
 public class Player1LifeCounterFragment extends Fragment{
 
-    public static final String PREF_COUNT1="MyPrefsCount1";
+    public static final String PREF_COUNT1 = "MyPrefsCount1";
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState){
         super.onActivityCreated(savedInstanceState);
 
-        TextView playerhealth=(TextView)getView().findViewById(R.id.PlayerHealth);
-        TextView poisonhealth=(TextView)getView().findViewById(R.id.poison_health);
+        TextView playerhealth = (TextView)getView().findViewById(R.id.PlayerHealth);
+        TextView poisonhealth = (TextView)getView().findViewById(R.id.poison_health);
 
-        SharedPreferences pref=getActivity().getSharedPreferences(PREF_COUNT1, 0);
-        String health1=pref.getString("health1", "20");
-        String poison1=pref.getString("poison1", "0");
+        SharedPreferences pref = getActivity().getSharedPreferences(PREF_COUNT1, 0);
+        String health1 = pref.getString("health1", "20");
+        String poison1 = pref.getString("poison1", "0");
         playerhealth.setText(health1);
         poisonhealth.setText(poison1);
     }
@@ -43,20 +43,20 @@ public class Player1LifeCounterFragment extends Fragment{
         View view=inflater.inflate(R.layout.life_counter_fragment, container, false);
 
         //player one buttons
-        playerhealth=(TextView)view.findViewById(R.id.PlayerHealth);
-        poisonhealth=(TextView)view.findViewById(R.id.poison_health);
+        playerhealth = (TextView)view.findViewById(R.id.PlayerHealth);
+        poisonhealth = (TextView)view.findViewById(R.id.poison_health);
         p1plus1 = (Button) view.findViewById(R.id.plusOne);
         p1plus5 = (Button) view.findViewById(R.id.plusFive);
         p1minus1 = (Button) view.findViewById(R.id.minusOne);
         p1minus5 = (Button) view.findViewById(R.id.minusFive);
         p1poison1 = (Button) view.findViewById(R.id.poisonOne);
-        p1poisonMin1=(Button) view.findViewById(R.id.poisonMinOne);
+        p1poisonMin1 = (Button) view.findViewById(R.id.poisonMinOne);
 
-        Number initial=20;
-        Number poisoninitial=0;
+        Number initial = 20;
+        Number poisoninitial = 0;
 
-        String health=initial.toString();
-        String poisonh=poisoninitial.toString();
+        String health = initial.toString();
+        String poisonh = poisoninitial.toString();
 
         playerhealth.setText(health);
         poisonhealth.setText(poisonh);
@@ -117,11 +117,11 @@ public class Player1LifeCounterFragment extends Fragment{
     }
 
     public void resetHealth(){
-        TextView playerhealth=(TextView)getView().findViewById(R.id.PlayerHealth);
-        TextView poisonhealth=(TextView)getView().findViewById(R.id.poison_health);
+        TextView playerhealth = (TextView)getView().findViewById(R.id.PlayerHealth);
+        TextView poisonhealth = (TextView)getView().findViewById(R.id.poison_health);
 
-        Number health=20;
-        Number poison=0;
+        Number health = 20;
+        Number poison = 0;
 
         playerhealth.setText(health.toString());
         poisonhealth.setText(poison.toString());
@@ -131,11 +131,11 @@ public class Player1LifeCounterFragment extends Fragment{
         super.onPause();
 
 
-        TextView playerhealth=(TextView)getView().findViewById(R.id.PlayerHealth);
-        TextView poisonhealth=(TextView)getView().findViewById(R.id.poison_health);
+        TextView playerhealth = (TextView)getView().findViewById(R.id.PlayerHealth);
+        TextView poisonhealth = (TextView)getView().findViewById(R.id.poison_health);
 
-        SharedPreferences pref=getActivity().getSharedPreferences(PREF_COUNT1, 0);
-        SharedPreferences.Editor edt=pref.edit();
+        SharedPreferences pref = getActivity().getSharedPreferences(PREF_COUNT1, 0);
+        SharedPreferences.Editor edt = pref.edit();
         edt.putString("health1", playerhealth.getText().toString());
         edt.putString("poison1", poisonhealth.getText().toString());
 

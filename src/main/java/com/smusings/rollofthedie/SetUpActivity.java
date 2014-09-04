@@ -12,8 +12,7 @@ public class SetUpActivity extends FragmentActivity {
     //set up activity in order to not repeat code
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-
-        MenuInflater menuInflater=getMenuInflater();
+        MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.layout.menu, menu);
         return true;
     }
@@ -22,7 +21,7 @@ public class SetUpActivity extends FragmentActivity {
     public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()){
             case R.id.menu_about:
-                Intent intent=new Intent(this, About.class);
+                Intent intent = new Intent(this, About.class);
                 startActivity(intent);
                 return true;
 

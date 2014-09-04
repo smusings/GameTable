@@ -25,9 +25,9 @@ public class DieRollTest
     protected void setUp() throws Exception{
         super.setUp();
 
-        mDieRoll=getActivity();
-        mDieRollFrag=getActivity().dieRollFragment;
-        mRollListFrag=getActivity().rollListFragment;
+        mDieRoll = getActivity();
+        mDieRollFrag = getActivity().dieRollFragment;
+        mRollListFrag = getActivity().rollListFragment;
     }
 
     public void testPreconditions(){
@@ -36,17 +36,15 @@ public class DieRollTest
         assertNotNull("List is null", mRollListFrag);
     }
 
-    //need to find a way to intercept the string and find out what it is going to be
-    //the test "works" in that the press triggers it just never reads the string
+    //since we have no way of making sure that the string is the same
+    //we make sure that the string contains the non Random number part
     @MediumTest
     public void testButton4(){
-        Button d4frag=mDieRollFrag.die4;
-        ArrayAdapter<String> aafrag=mDieRoll.aa;
-        String skree="Your four sided die roll came up";
-
+        Button d4frag = mDieRollFrag.die4;
+        ArrayAdapter<String> aafrag = mDieRoll.aa;
+        String result = "Your four sided die roll came up";
 
         TouchUtils.clickView(this, d4frag);
-        assertTrue(skree, aafrag.getItem(0).contains(skree));
-
+        assertTrue(result, aafrag.getItem(0).contains(result));
     }
 }

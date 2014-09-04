@@ -32,30 +32,28 @@ public class RollListItemView extends TextView{
 	private float margin;
 	
 	private void init(){
-		Resources myResources=getResources();
+		Resources myResources = getResources();
 		
-		marginPaint=new Paint(Paint.ANTI_ALIAS_FLAG);
+		marginPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 		marginPaint.setColor(myResources.getColor(R.color.LightBlue));
-		linePaint=new Paint(Paint.ANTI_ALIAS_FLAG);
+		linePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 		linePaint.setColor(myResources.getColor(R.color.Red));
 		
-		paperColor=myResources.getColor(R.color.White);
-		margin=myResources.getDimension(R.dimen.white);
-		
+		paperColor = myResources.getColor(R.color.White);
 	}
 	
 	@Override 
 	public void onDraw(Canvas canvas){
 		canvas.drawColor(paperColor);
 		
-		canvas.drawLine(0,0,0,getMeasuredHeight(), linePaint);
+		canvas.drawLine(0, 0, 0, getMeasuredHeight(), linePaint);
 		canvas.drawLine(0, getMeasuredHeight(),
 				getMeasuredWidth(), getMeasuredHeight(), linePaint);
 		
-		canvas.drawLine(margin,0,margin,getMeasuredHeight(),marginPaint);
+		canvas.drawLine(margin, 0, margin, getMeasuredHeight(), marginPaint);
 		
 		canvas.save();
-		canvas.translate(margin,0);
+		canvas.translate(margin, 0);
 		
 		super.onDraw(canvas);
 		canvas.restore();

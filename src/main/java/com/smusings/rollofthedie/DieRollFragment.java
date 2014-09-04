@@ -20,22 +20,22 @@ public class DieRollFragment extends Fragment {
 	@Override
 	public View onCreateView (LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState){
-		View view=inflater.inflate(R.layout.activity_die_roll_fragment, container, false);
+		View view = inflater.inflate(R.layout.activity_die_roll_fragment, container, false);
 
 		//the die
-		die6=(Button)view.findViewById(R.id.die6);
-		die4=(Button)view.findViewById(R.id.die4);
-		die8=(Button)view.findViewById(R.id.die8);
-		die10=(Button)view.findViewById(R.id.die10);
-		die12=(Button)view.findViewById(R.id.die12);
-		die20=(Button)view.findViewById(R.id.die20);
+		die6 = (Button)view.findViewById(R.id.die6);
+		die4 = (Button)view.findViewById(R.id.die4);
+		die8 = (Button)view.findViewById(R.id.die8);
+		die10 = (Button)view.findViewById(R.id.die10);
+		die12 = (Button)view.findViewById(R.id.die12);
+		die20 = (Button)view.findViewById(R.id.die20);
 
         //each button press will roll a number between 1 and what is assigned to it, put that number
         //into the string and send it via listener to an activity that calls it up
 		die4.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				int Roll_four=(int)Math.ceil(Math.random()*4);
+				int Roll_four = (int)Math.ceil(Math.random()*4);
 				String message = "Your four sided die roll came up a "+Roll_four;
 				onNewRollListener.onNewRoll(message);
 			}
@@ -44,7 +44,7 @@ public class DieRollFragment extends Fragment {
 		die6.setOnClickListener(new View.OnClickListener() {	
 			@Override
 			public void onClick(View v) {
-				int Roll_six=(int)Math.ceil(Math.random()*6);
+				int Roll_six = (int)Math.ceil(Math.random()*6);
 				String message = "Your six sided die roll came up a "+Roll_six;
 				onNewRollListener.onNewRoll(message);
 			}
@@ -53,7 +53,7 @@ public class DieRollFragment extends Fragment {
 		die8.setOnClickListener(new View.OnClickListener() {	
 			@Override
 			public void onClick(View v) {
-				int Roll_eight=(int)Math.ceil(Math.random()*8);
+				int Roll_eight = (int)Math.ceil(Math.random()*8);
 				String message = "Your eight sided die roll came up a "+Roll_eight;
 				onNewRollListener.onNewRoll(message);
 			}
@@ -62,7 +62,7 @@ public class DieRollFragment extends Fragment {
 		die10.setOnClickListener(new View.OnClickListener() {			
 			@Override
 			public void onClick(View v) {	
-				int Roll_ten=((int)Math.ceil(Math.random()*10));
+				int Roll_ten = ((int)Math.ceil(Math.random()*10));
 				String message = "Your ten sided die roll came up a "+Roll_ten;
 				onNewRollListener.onNewRoll(message);
 			}
@@ -71,7 +71,7 @@ public class DieRollFragment extends Fragment {
 		die12.setOnClickListener(new View.OnClickListener() {			
 			@Override
 			public void onClick(View v) {
-				int Roll_twelve=((int)Math.ceil(Math.random()*12));
+				int Roll_twelve = ((int)Math.ceil(Math.random()*12));
 				String message = "Your twelve sided die roll came up a "+Roll_twelve;
 				onNewRollListener.onNewRoll(message);
 			}
@@ -80,7 +80,7 @@ public class DieRollFragment extends Fragment {
 		die20.setOnClickListener(new View.OnClickListener() {		
 			@Override
 			public void onClick(View v) {
-				int Roll_twnty=(int)Math.ceil(Math.random()*20);
+				int Roll_twnty = (int)Math.ceil(Math.random()*20);
 				String message = "Your twenty sided die roll came up a "+Roll_twnty;
 				onNewRollListener.onNewRoll(message);
 				
@@ -101,7 +101,7 @@ public class DieRollFragment extends Fragment {
 	public void onAttach(Activity activity){
 		super.onAttach(activity);
 		try{
-			onNewRollListener=(OnNewRollListener)activity;
+			onNewRollListener = (OnNewRollListener)activity;
 		} catch (ClassCastException e){
 			throw new ClassCastException(activity.toString()+
 					" must implement OnNewRollListener");
