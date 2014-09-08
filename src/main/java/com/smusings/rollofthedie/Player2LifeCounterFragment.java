@@ -52,14 +52,8 @@ public class Player2LifeCounterFragment extends Fragment{
         p2poison1 = (Button) view.findViewById(R.id.poisonOne);
         p2poisonMin1 = (Button) view.findViewById(R.id.poisonMinOne);
 
-        Number initial = 20;
-        Number poisoninitial = 0;
-
-        String health = initial.toString();
-        String poisonh = poisoninitial.toString();
-
-        playerhealth.setText(health);
-        poisonhealth.setText(poisonh);
+        playerhealth.setText("20");
+        poisonhealth.setText("0");
 
         //sends the number along to an activity
         p2plus1.setOnClickListener(new View.OnClickListener() {
@@ -120,11 +114,8 @@ public class Player2LifeCounterFragment extends Fragment{
         TextView playerhealth = (TextView)getView().findViewById(R.id.PlayerHealth);
         TextView poisonhealth = (TextView)getView().findViewById(R.id.poison_health);
 
-        Number health = 20;
-        Number poison = 0;
-
-        playerhealth.setText(health.toString());
-        poisonhealth.setText(poison.toString());
+        playerhealth.setText("20");
+        poisonhealth.setText("0");
     }
 
     public void onPause(){

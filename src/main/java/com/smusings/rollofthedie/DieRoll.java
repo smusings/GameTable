@@ -17,7 +17,6 @@ public class DieRoll extends SetUpActivity
 
 
     public void onNewRoll(String message) {
-        //skr is for testing purposes
         aa.insert(message, 0);
     }
 

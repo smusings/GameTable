@@ -63,7 +63,7 @@ public class MagicLifeCounterTest
         TouchUtils.clickView(this, add1p2);
         assertEquals(str,tv2.getText());
     }
-=
+
     @MediumTest
     public void testMenuReset(){
 
