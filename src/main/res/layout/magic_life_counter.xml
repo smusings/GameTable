@@ -36,11 +36,11 @@
             android:layout_height="fill_parent"
             tools:layout="@layout/life_counter_fragment" />
 
-        <TextView
-            android:layout_width="wrap_content"
+
+        <View
+            android:layout_width="5dp"
             android:layout_height="fill_parent"
-            android:background="@color/Black"
-            android:text="|"/>
+            android:background="@color/Black"/>
 
         <fragment
             android:name="com.smusings.rollofthedie.Player2LifeCounterFragment"

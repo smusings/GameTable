@@ -13,11 +13,10 @@
     android:gravity="center"
     android:fontFamily="sans-serif-condensed"
     android:textSize="32sp"/>
-    <TextView
+    <View
     android:layout_width="fill_parent"
     android:layout_height="5dp"
-    android:background="@color/Black"
-    android:text="_"/>
+    android:background="@color/Black"/>
     <TextView
         android:id="@+id/poison_health"
         android:layout_width="fill_parent"
@@ -26,11 +25,10 @@
         android:textSize="30sp"
         android:text="0"
         android:gravity="center"/>
-    <TextView
+    <View
         android:layout_width="fill_parent"
         android:layout_height="5dp"
-        android:background="@color/Black"
-        android:text="_"/>
+        android:background="@color/Black"/>
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">

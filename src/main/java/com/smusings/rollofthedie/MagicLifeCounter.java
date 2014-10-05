@@ -21,8 +21,6 @@ public class MagicLifeCounter extends SetUpActivity{
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu_clear:
-                player1LC = (Player1LifeCounterFragment) getSupportFragmentManager().findFragmentById(R.id.p1buttons);
-                player2LC = (Player2LifeCounterFragment) getSupportFragmentManager().findFragmentById(R.id.p2buttons);
 
                 player1LC.resetHealth();
                 player2LC.resetHealth();

@@ -90,7 +90,7 @@ public class Player1LifeCounterFragment extends Fragment{
             }
         });
 
-        //string to get rid of confusing logic in activity
+        //poison health
         p1poison1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -114,7 +114,7 @@ public class Player1LifeCounterFragment extends Fragment{
         TextView playerhealth = (TextView)getView().findViewById(R.id.PlayerHealth);
         TextView poisonhealth = (TextView)getView().findViewById(R.id.poison_health);
 
-
+        //resets the health of the player
         playerhealth.setText("20");
         poisonhealth.setText("0");
     }
