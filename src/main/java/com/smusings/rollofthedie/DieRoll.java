@@ -7,7 +7,7 @@ import android.widget.ArrayAdapter;
 
 import java.util.ArrayList;
 
-public class DieRoll extends SetUpActivity
+public class DieRoll extends MainActivity
         implements DieRollFragment.OnNewRollListener {
 
     public ArrayAdapter<String> aa;
@@ -46,6 +46,7 @@ public class DieRoll extends SetUpActivity
 
     }
 
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu_clear:

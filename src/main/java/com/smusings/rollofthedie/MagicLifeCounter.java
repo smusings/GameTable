@@ -3,7 +3,7 @@ package com.smusings.rollofthedie;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-public class MagicLifeCounter extends SetUpActivity{
+public class MagicLifeCounter extends MainActivity{
 
 
     public Player1LifeCounterFragment player1LC;
