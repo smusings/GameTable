@@ -3,11 +3,14 @@ package com.smusings.rollofthedie;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
-public class MainActivity extends SetUpActivity{
+public class MainActivity extends FragmentActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -42,6 +45,15 @@ public class MainActivity extends SetUpActivity{
         }
     }
 
+    //set up activity in order to not repeat code
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.main, menu);
+        return true;
+    }
+
+
     public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()){
             case R.id.menu_clear:
@@ -52,5 +64,6 @@ public class MainActivity extends SetUpActivity{
                 return super.onOptionsItemSelected(item);
         }
     }
+
 
 }
