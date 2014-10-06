@@ -7,11 +7,13 @@
         android:name="com.smusings.rollofthedie.DieRollFragment"
         android:id="@+id/DieRollFrag"
         android:layout_width="match_parent"
-        android:layout_height="50dp"/>
+        android:layout_height="50dp"
+        tools:layout="@layout/activity_die_roll_fragment" />
     <fragment
         android:name="com.smusings.rollofthedie.RollListFragment"
         android:id="@+id/RollListFrag"
         android:layout_below="@id/DieRollFrag"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        tools:layout="@layout/roll_list_item"/>
 </RelativeLayout>
