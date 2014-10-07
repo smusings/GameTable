@@ -32,62 +32,47 @@ public class DieRollFragment extends Fragment {
 
         //each button press will roll a number between 1 and what is assigned to it, put that number
         //into the string and send it via listener to an activity that calls it up
-		die4.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				int Roll_four = (int)Math.ceil(Math.random()*4);
-				String message = "Your four sided die roll came up a "+Roll_four;
-				onNewRollListener.onNewRoll(message);
-			}
-		});
-		
-		die6.setOnClickListener(new View.OnClickListener() {	
-			@Override
-			public void onClick(View v) {
-				int Roll_six = (int)Math.ceil(Math.random()*6);
-				String message = "Your six sided die roll came up a "+Roll_six;
-				onNewRollListener.onNewRoll(message);
-			}
-		});
-		
-		die8.setOnClickListener(new View.OnClickListener() {	
-			@Override
-			public void onClick(View v) {
-				int Roll_eight = (int)Math.ceil(Math.random()*8);
-				String message = "Your eight sided die roll came up a "+Roll_eight;
-				onNewRollListener.onNewRoll(message);
-			}
-		});
-		
-		die10.setOnClickListener(new View.OnClickListener() {			
-			@Override
-			public void onClick(View v) {	
-				int Roll_ten = ((int)Math.ceil(Math.random()*10));
-				String message = "Your ten sided die roll came up a "+Roll_ten;
-				onNewRollListener.onNewRoll(message);
-			}
-		});
-		
-		die12.setOnClickListener(new View.OnClickListener() {			
-			@Override
-			public void onClick(View v) {
-				int Roll_twelve = ((int)Math.ceil(Math.random()*12));
-				String message = "Your twelve sided die roll came up a "+Roll_twelve;
-				onNewRollListener.onNewRoll(message);
-			}
-		});
-		
-		die20.setOnClickListener(new View.OnClickListener() {		
-			@Override
-			public void onClick(View v) {
-				int Roll_twnty = (int)Math.ceil(Math.random()*20);
-				String message = "Your twenty sided die roll came up a "+Roll_twnty;
-				onNewRollListener.onNewRoll(message);
-				
-			}
-		});
+		die4.setOnClickListener(dieRollClickListener);
+		die6.setOnClickListener(dieRollClickListener);
+		die8.setOnClickListener(dieRollClickListener);
+		die10.setOnClickListener(dieRollClickListener);
+		die12.setOnClickListener(dieRollClickListener);
+        die20.setOnClickListener(dieRollClickListener);
+
 		return view;
 	}
+
+    View.OnClickListener dieRollClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            String message = "null";
+            if (((Button)v) == die4){
+                int Roll_four = (int)Math.ceil(Math.random()*4);
+                message = "Your 4-sided die roll came up a "+Roll_four;
+            }
+            else if (((Button)v) == die6){
+                int Roll_six = (int)Math.ceil(Math.random()*6);
+                message = "Your 6-sided die roll came up a "+Roll_six;
+            }
+            else if (((Button)v) == die8){
+                int Roll_eight = (int)Math.ceil(Math.random()*8);
+                message = "Your 8-sided die roll came up a "+Roll_eight;
+            }
+            else if (((Button)v) == die10){
+                int Roll_ten = ((int)Math.ceil(Math.random()*10));
+                message = "Your 10-sided die roll came up a "+Roll_ten;
+            }
+            else if (((Button)v) == die12){
+                int Roll_twelve = ((int)Math.ceil(Math.random()*12));
+                message = "Your 12-sided die roll came up a "+Roll_twelve;
+            }
+            else if (((Button)v) == die20){
+                int Roll_twnty = (int)Math.ceil(Math.random()*20);
+                message = "Your 20-sided die roll came up a "+Roll_twnty;
+            }
+            onNewRollListener.onNewRoll(message);
+        }
+    };
 
     //the listener that sends it along
     //the listener locks for a new String message to send to an activity

@@ -49,7 +49,7 @@ public class Player2LifeCounterFragment extends Fragment{
         p2plus5 = (Button) view.findViewById(R.id.plusFive);
         p2minus1 = (Button) view.findViewById(R.id.minusOne);
         p2minus5 = (Button) view.findViewById(R.id.minusFive);
-        p2poison1 = (Button) view.findViewById(R.id.poisonOne);
+        p2poison1 = (Button) view.findViewById(R.id.poisonAddOne);
         p2poisonMin1 = (Button) view.findViewById(R.id.poisonMinOne);
 
         playerhealth.setText("20");
