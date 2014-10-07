@@ -1,9 +1,10 @@
 package com.smusings.rollofthedie;
 
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.view.MenuItem;
 
-public class MagicLifeCounter extends MainActivity{
+public class MagicLifeCounter extends FragmentActivity {
 
 
     public Player1LifeCounterFragment player1LC;

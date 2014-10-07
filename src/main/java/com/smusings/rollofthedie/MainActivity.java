@@ -1,16 +1,16 @@
 package com.smusings.rollofthedie;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
-public class MainActivity extends FragmentActivity {
+public class MainActivity extends Activity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

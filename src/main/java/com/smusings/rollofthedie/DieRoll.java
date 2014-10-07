@@ -1,13 +1,14 @@
 package com.smusings.rollofthedie;
 
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 
 import java.util.ArrayList;
 
-public class DieRoll extends MainActivity
+public class DieRoll extends FragmentActivity
         implements DieRollFragment.OnNewRollListener {
 
     public ArrayAdapter<String> aa;
