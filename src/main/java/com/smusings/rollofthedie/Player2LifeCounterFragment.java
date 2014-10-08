@@ -111,19 +111,12 @@ public class Player2LifeCounterFragment extends Fragment{
     }
 
     public void resetHealth(){
-        TextView playerhealth = (TextView)getView().findViewById(R.id.PlayerHealth);
-        TextView poisonhealth = (TextView)getView().findViewById(R.id.poison_health);
-
         playerhealth.setText("20");
         poisonhealth.setText("0");
     }
 
     public void onPause(){
         super.onPause();
-
-
-        TextView playerhealth = (TextView)getView().findViewById(R.id.PlayerHealth);
-        TextView poisonhealth = (TextView)getView().findViewById(R.id.poison_health);
 
         SharedPreferences pref = getActivity().getSharedPreferences(PREF_COUNT2, 0);
         SharedPreferences.Editor edt=pref.edit();
