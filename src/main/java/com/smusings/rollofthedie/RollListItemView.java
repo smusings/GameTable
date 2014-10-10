@@ -35,11 +35,10 @@ public class RollListItemView extends TextView{
 		Resources myResources = getResources();
 		
 		marginPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-		marginPaint.setColor(myResources.getColor(R.color.LightBlue));
+		marginPaint.setColor(myResources.getColor(R.color.Violet));
 		linePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-		linePaint.setColor(myResources.getColor(R.color.Red));
-		
-		paperColor = myResources.getColor(R.color.White);
+		linePaint.setColor(myResources.getColor(R.color.LightBlue));
+		paperColor = myResources.getColor(R.color.AntiqueWhite);
 	}
 	
 	@Override 

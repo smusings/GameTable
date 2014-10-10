@@ -6,7 +6,6 @@
     android:padding="10dp"
     android:scrollbars="vertical"
     android:fadingEdge="vertical"
-    android:textColor="@color/DimGray"
     android:fontFamily="sans-serif-condensed"
     android:textStyle="italic"
     />	

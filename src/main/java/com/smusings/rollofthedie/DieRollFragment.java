@@ -42,6 +42,9 @@ public class DieRollFragment extends Fragment {
 		return view;
 	}
 
+    public int rollResult(int roll) {
+        return (int) (Math.random() * ((roll - 1) + 1) + 1);
+    }
     View.OnClickListener dieRollClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -68,9 +71,6 @@ public class DieRollFragment extends Fragment {
         }
     };
 
-    public int rollResult(int roll){
-        return (int)(Math.random() * ((roll - 1) +1)+ 1);
-    }
     //the listener that sends it along
     //the listener locks for a new String message to send to an activity
 	public interface OnNewRollListener{

@@ -45,8 +45,6 @@ public class DieRoll extends FragmentActivity
 
         //Bind the Array Adapter to the list view
         rollListFragment.setListAdapter(aa);
-
-
     }
 
     @Override
