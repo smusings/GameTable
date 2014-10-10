@@ -47,33 +47,30 @@ public class DieRollFragment extends Fragment {
         public void onClick(View v) {
             String message = "null";
             if (((Button)v) == die4){
-                int Roll_four = (int)Math.ceil(Math.random()*4);
-                message = "Your 4-sided die roll came up a "+Roll_four;
+                message = "Your 4-sided die roll came up a " + rollResult(4);
             }
             else if (((Button)v) == die6){
-                int Roll_six = (int)Math.ceil(Math.random()*6);
-                message = "Your 6-sided die roll came up a "+Roll_six;
+                message = "Your 6-sided die roll came up a " +  + rollResult(6);
             }
             else if (((Button)v) == die8){
-                int Roll_eight = (int)Math.ceil(Math.random()*8);
-                message = "Your 8-sided die roll came up a "+Roll_eight;
+                message = "Your 8-sided die roll came up a " + rollResult(8);
             }
             else if (((Button)v) == die10){
-                int Roll_ten = ((int)Math.ceil(Math.random()*10));
-                message = "Your 10-sided die roll came up a "+Roll_ten;
+                message = "Your 10-sided die roll came up a " + rollResult(10);
             }
             else if (((Button)v) == die12){
-                int Roll_twelve = ((int)Math.ceil(Math.random()*12));
-                message = "Your 12-sided die roll came up a "+Roll_twelve;
+                message = "Your 12-sided die roll came up a " + rollResult(12);
             }
             else if (((Button)v) == die20){
-                int Roll_twnty = (int)Math.ceil(Math.random()*20);
-                message = "Your 20-sided die roll came up a "+Roll_twnty;
+                message = "Your 20-sided die roll came up a " + rollResult(20);
             }
             onNewRollListener.onNewRoll(message);
         }
     };
 
+    public int rollResult(int roll){
+        return (int)(Math.random() * ((roll - 1) +1)+ 1);
+    }
     //the listener that sends it along
     //the listener locks for a new String message to send to an activity
 	public interface OnNewRollListener{
