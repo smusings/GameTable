@@ -8,4 +8,5 @@
     android:fadingEdge="vertical"
     android:fontFamily="sans-serif-condensed"
     android:textStyle="italic"
+    android:textSize="20sp"
     />	

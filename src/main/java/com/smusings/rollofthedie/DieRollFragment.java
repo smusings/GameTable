@@ -50,22 +50,22 @@ public class DieRollFragment extends Fragment {
         public void onClick(View v) {
             String message = "null";
             if (((Button)v) == die4){
-                message = "Your 4-sided die roll came up a " + rollResult(4);
+                message = "Your D4 came up a " + rollResult(4);
             }
             else if (((Button)v) == die6){
-                message = "Your 6-sided die roll came up a " +  + rollResult(6);
+                message = "Your D6 came up a " +  + rollResult(6);
             }
             else if (((Button)v) == die8){
-                message = "Your 8-sided die roll came up a " + rollResult(8);
+                message = "Your D8 came up a " + rollResult(8);
             }
             else if (((Button)v) == die10){
-                message = "Your 10-sided die roll came up a " + rollResult(10);
+                message = "Your D10 came up a " + rollResult(10);
             }
             else if (((Button)v) == die12){
-                message = "Your 12-sided die roll came up a " + rollResult(12);
+                message = "Your D12 came up a " + rollResult(12);
             }
             else if (((Button)v) == die20){
-                message = "Your 20-sided die roll came up a " + rollResult(20);
+                message = "Your D20 came up a " + rollResult(20);
             }
             onNewRollListener.onNewRoll(message);
         }
