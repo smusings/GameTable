@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import java.util.Random;
+
 public class DieRollFragment extends Fragment {
 
     public Button die4;
@@ -43,8 +45,10 @@ public class DieRollFragment extends Fragment {
 	}
 
     public int rollResult(int roll) {
-        return (int) (Math.random() * ((roll - 1) + 1) + 1);
+        Random random = new Random();
+        return (random.nextInt(roll) + 1);
     }
+
     View.OnClickListener dieRollClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
