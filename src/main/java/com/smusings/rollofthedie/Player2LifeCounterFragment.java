@@ -56,6 +56,7 @@ public class Player2LifeCounterFragment extends Fragment{
         poisonhealth.setText("0");
 
         //sends the number along to an activity
+        //plus
         p2plus1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -72,6 +73,7 @@ public class Player2LifeCounterFragment extends Fragment{
                 playerhealth.setText(Integer.toString(health));
             }
         });
+        //minus
         p2minus1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
