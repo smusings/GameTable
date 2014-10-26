@@ -17,8 +17,10 @@ public class MagicLifeCounter extends FragmentActivity {
         setContentView(R.layout.magic_life_counter);
 
         //defines the support fragments
-        player1LC = (Player1LifeCounterFragment) getSupportFragmentManager().findFragmentById(R.id.p1buttons);
-        player2LC = (Player2LifeCounterFragment) getSupportFragmentManager().findFragmentById(R.id.p2buttons);
+        player1LC = (Player1LifeCounterFragment)
+                getSupportFragmentManager().findFragmentById(R.id.p1buttons);
+        player2LC = (Player2LifeCounterFragment)
+                getSupportFragmentManager().findFragmentById(R.id.p2buttons);
     }
 
     @Override

@@ -37,11 +37,11 @@ public class MainActivity extends Activity {
         int flip_coin = (int) Math.ceil(Math.random() * 2);
         if (flip_coin == 1){
             cf.setImageDrawable(dHeads);
-            cf.setTag(R.drawable.heads);
+            cf.setTag(R.drawable.heads); //for testing
         }
         else if (flip_coin == 2) {
             cf.setImageDrawable(dTails);
-            cf.setTag(R.drawable.tails);
+            cf.setTag(R.drawable.tails); //for testing
         }
     }
 

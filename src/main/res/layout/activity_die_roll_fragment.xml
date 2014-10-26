@@ -1,65 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-
-	android:id="@+id/buttons"
+    android:id="@+id/buttons"
     android:layout_width="match_parent"
     android:layout_height="70dp"
     android:background="@drawable/woodback"
     android:gravity="center">
-    	<Button
-        	android:id="@+id/die4"
-        	style="?android:attr/buttonStyleSmall"
-        	android:layout_width="wrap_content"
-        	android:layout_height="wrap_content"
-            android:padding="10dp"
-        	android:text="@string/button_d4"
-        	android:background="@drawable/ic_action_d4noback"
-        	android:textColor="@color/Black"/>
-	    <Button
-	        android:id="@+id/die6"
-	        style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-	        android:text="@string/button_d6"
-	        android:background="@drawable/ic_action_d6noback"
-	        android:textColor="@color/Black" />    
-	    <Button
-	        android:id="@+id/die8"
-	        style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-	        android:text="@string/button_d8"
-	        android:background="@drawable/ic_action_d8noback"
-	        android:textColor="@color/Black" />
-	    <Button
-	        android:id="@+id/die10"
-	        style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-	        android:text="@string/button_d10"
-	        android:background="@drawable/ic_action_d10noback"
-	        android:textColor="@color/Black"  />
-	    <Button
-	        android:id="@+id/die12"
-	        style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-	        android:text="@string/button_d12"
-	        android:background="@drawable/ic_action_d12noback"
-	        android:textColor="@color/Black" />
-	    <Button
-	        android:id="@+id/die20"
-	        style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-	        android:text="@string/button_d20"
-	        android:background="@drawable/ic_action_d20noback"
-	        android:textColor="@color/Black"  />
-	    </LinearLayout>
-	   
+    <Button
+        android:id="@+id/die4"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/button_d4"
+        android:background="@drawable/ic_action_d4noback"
+        android:textColor="@color/Black"/>
+    <Button
+        android:id="@+id/die6"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/button_d6"
+        android:background="@drawable/ic_action_d6noback"
+        android:textColor="@color/Black" />
+    <Button
+        android:id="@+id/die8"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/button_d8"
+        android:background="@drawable/ic_action_d8noback"
+        android:textColor="@color/Black" />
+    <Button
+        android:id="@+id/die10"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/button_d10"
+        android:background="@drawable/ic_action_d10noback"
+        android:textColor="@color/Black"  />
+    <Button
+        android:id="@+id/die12"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/button_d12"
+        android:background="@drawable/ic_action_d12noback"
+        android:textColor="@color/Black" />
+    <Button
+        android:id="@+id/die20"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/button_d20"
+        android:background="@drawable/ic_action_d20noback"
+        android:textColor="@color/Black"  />
+</LinearLayout>

@@ -42,7 +42,6 @@ public class DieRoll extends FragmentActivity
         int resID = R.layout.roll_list_item;
         aa = new ArrayAdapter<String>(this, resID, DieRolls);
 
-
         //Bind the Array Adapter to the list view
         rollListFragment.setListAdapter(aa);
     }
