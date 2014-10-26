@@ -1,6 +1,6 @@
 package com.smusings.rollofthedie;
 
-import android.support.v4.app.ListFragment;
+import android.app.ListFragment;
 
 public class RollListFragment extends ListFragment {
 

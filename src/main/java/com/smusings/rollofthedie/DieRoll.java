@@ -1,8 +1,8 @@
 package com.smusings.rollofthedie;
 
+import android.app.Activity;
+import android.app.FragmentManager;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -10,7 +10,7 @@ import android.widget.ArrayAdapter;
 
 import java.util.ArrayList;
 
-public class DieRoll extends FragmentActivity
+public class DieRoll extends Activity
         implements DieRollFragment.OnNewRollListener {
 
     public ArrayAdapter<String> aa;
@@ -29,7 +29,7 @@ public class DieRoll extends FragmentActivity
         setContentView(R.layout.die_roll);
 
         //references to UI widgets
-        FragmentManager fm = getSupportFragmentManager();
+        FragmentManager fm = getFragmentManager();
         rollListFragment =
                 (RollListFragment) fm.findFragmentById(R.id.RollListFrag);
         dieRollFragment =

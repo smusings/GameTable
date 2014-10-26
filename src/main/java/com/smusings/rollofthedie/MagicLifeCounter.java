@@ -1,12 +1,12 @@
 package com.smusings.rollofthedie;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
-public class MagicLifeCounter extends FragmentActivity {
+public class MagicLifeCounter extends Activity {
 
 
     public Player1LifeCounterFragment player1LC;
@@ -18,9 +18,9 @@ public class MagicLifeCounter extends FragmentActivity {
 
         //defines the support fragments
         player1LC = (Player1LifeCounterFragment)
-                getSupportFragmentManager().findFragmentById(R.id.p1buttons);
+                getFragmentManager().findFragmentById(R.id.p1buttons);
         player2LC = (Player2LifeCounterFragment)
-                getSupportFragmentManager().findFragmentById(R.id.p2buttons);
+                getFragmentManager().findFragmentById(R.id.p2buttons);
     }
 
     @Override
