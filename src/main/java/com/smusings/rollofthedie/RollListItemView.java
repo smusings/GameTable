@@ -29,13 +29,11 @@ public class RollListItemView extends TextView{
 	private Paint marginPaint;
 	private Paint linePaint;
 	private int paperColor;
-	private float margin;
 	
 	private void init(){
 		Resources myResources = getResources();
 		
 		marginPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-		marginPaint.setColor(myResources.getColor(R.color.Violet));
 		linePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 		linePaint.setColor(myResources.getColor(R.color.LightBlue));
 		paperColor = myResources.getColor(R.color.AntiqueWhite);
@@ -48,11 +46,9 @@ public class RollListItemView extends TextView{
 		canvas.drawLine(0, 0, 0, getMeasuredHeight(), linePaint);
 		canvas.drawLine(0, getMeasuredHeight(),
 				getMeasuredWidth(), getMeasuredHeight(), linePaint);
-		
-		canvas.drawLine(margin, 0, margin, getMeasuredHeight(), marginPaint);
+
 		
 		canvas.save();
-		canvas.translate(margin, 0);
 		
 		super.onDraw(canvas);
 		canvas.restore();
