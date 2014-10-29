@@ -57,63 +57,59 @@ public class Player1LifeCounterFragment extends Fragment{
 
         //sends the number along to an activity
         //plus
-        p1plus1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int p1health = Integer.valueOf(playerhealth.getText().toString());
-                int health = p1health + 1;
-                playerhealth.setText(Integer.toString(health));
-            }
-        });
-        p1plus5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int p1health = Integer.valueOf(playerhealth.getText().toString());
-                int health = p1health + 5;
-                playerhealth.setText(Integer.toString(health));
-            }
-        });
+        p1plus1.setOnClickListener(health_math);
+        p1plus5.setOnClickListener(health_math);
         //minus
-        p1minus1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int p1health = Integer.valueOf(playerhealth.getText().toString());
-                int health = p1health - 1;
-                playerhealth.setText(Integer.toString(health));
-            }
-        });
-
-        p1minus5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int p1health = Integer.valueOf(playerhealth.getText().toString());
-                int health = p1health - 5;
-                playerhealth.setText(Integer.toString(health));
-            }
-        });
+        p1minus1.setOnClickListener(health_math);
+        p1minus5.setOnClickListener(health_math);
 
         //poison health
-        p1poison1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int p1health = Integer.valueOf(poisonhealth.getText().toString());
-                int health = p1health + 1;
-                poisonhealth.setText(Integer.toString(health));
-            }
-        });
-        p1poisonMin1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int p1health = Integer.valueOf(poisonhealth.getText().toString());
-                int health = p1health - 1;
-                poisonhealth.setText(Integer.toString(health));
-            }
-        });
+        p1poison1.setOnClickListener(poison_math);
+        p1poisonMin1.setOnClickListener(poison_math);
         return view;
     }
 
-    public void resetHealth(){
+    View.OnClickListener health_math = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            int n = 0;
+            if ((Button)v == p1plus1){
+                n = 1;
+            }
+            else if ((Button)v == p1plus5){
+                n = 5;
+            }
+            else if ((Button)v == p1minus1){
+                n = -1;
+            }
+            else if ((Button)v == p1minus5){
+                n = -5;
+            }
+            playerhealth.setText(Integer.toString(
+                    life_total_maths(n, playerhealth)));
+        }
+    };
 
+    View.OnClickListener poison_math = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            int n = 0;
+            if ((Button)v == p1poison1){
+                n = 1;
+            }
+            else if ((Button)v == p1poisonMin1){
+                n = -1;
+            }
+            poisonhealth.setText(Integer.toString(
+                    life_total_maths(n, poisonhealth)));
+        }
+    };
+
+    public int life_total_maths(int n, TextView tv){
+        return Integer.valueOf(tv.getText().toString()) + n;
+    }
+
+    public void resetHealth(){
         //resets the health of the player
         playerhealth.setText("20");
         poisonhealth.setText("0");
