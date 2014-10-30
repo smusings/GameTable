@@ -1,7 +1,7 @@
 package com.smusings.rollofthedie;
 
-import android.content.SharedPreferences;
 import android.app.Fragment;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -40,7 +40,7 @@ public class Player1LifeCounterFragment extends Fragment{
     @Override
     public View onCreateView (LayoutInflater inflater, ViewGroup container,
                               Bundle savedInstanceState){
-        View view=inflater.inflate(R.layout.life_counter_fragment, container, false);
+        View view = inflater.inflate(R.layout.life_counter_fragment, container, false);
 
         //player one buttons
         playerhealth = (TextView)view.findViewById(R.id.PlayerHealth);
@@ -73,16 +73,16 @@ public class Player1LifeCounterFragment extends Fragment{
         @Override
         public void onClick(View v) {
             int n = 0;
-            if ((Button)v == p1plus1){
+            if (v == p1plus1){
                 n = 1;
             }
-            else if ((Button)v == p1plus5){
+            else if (v == p1plus5){
                 n = 5;
             }
-            else if ((Button)v == p1minus1){
+            else if (v == p1minus1){
                 n = -1;
             }
-            else if ((Button)v == p1minus5){
+            else if (v == p1minus5){
                 n = -5;
             }
             playerhealth.setText(Integer.toString(
@@ -94,10 +94,10 @@ public class Player1LifeCounterFragment extends Fragment{
         @Override
         public void onClick(View v) {
             int n = 0;
-            if ((Button)v == p1poison1){
+            if (v == p1poison1){
                 n = 1;
             }
-            else if ((Button)v == p1poisonMin1){
+            else if (v == p1poisonMin1){
                 n = -1;
             }
             poisonhealth.setText(Integer.toString(

@@ -1,7 +1,7 @@
 package com.smusings.rollofthedie;
 
-import android.content.SharedPreferences;
 import android.app.Fragment;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -73,16 +73,16 @@ public class Player2LifeCounterFragment extends Fragment{
         @Override
         public void onClick(View v) {
             int n = 0;
-            if ((Button)v == p2plus1){
+            if (v == p2plus1){
                 n = 1;
             }
-            else if ((Button)v == p2plus5){
+            else if (v == p2plus5){
                 n = 5;
             }
-            else if ((Button)v == p2minus1){
+            else if (v == p2minus1){
                 n = -1;
             }
-            else if ((Button)v == p2minus5){
+            else if (v == p2minus5){
                 n = -5;
             }
             playerhealth.setText(Integer.toString(
@@ -94,10 +94,10 @@ public class Player2LifeCounterFragment extends Fragment{
         @Override
         public void onClick(View v) {
             int n = 0;
-            if ((Button)v == p2poison1){
+            if (v == p2poison1){
                 n = 1;
             }
-            else if ((Button)v == p2poisonMin1){
+            else if (v == p2poisonMin1){
                 n = -1;
             }
             poisonhealth.setText(Integer.toString(
