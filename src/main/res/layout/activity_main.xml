@@ -3,7 +3,8 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/DarkSlateGray">
     <LinearLayout
         android:layout_centerInParent="true"
         android:orientation="vertical"
@@ -17,7 +18,7 @@
             android:onClick="dieRoll"
             android:layout_margin="10dp"
             android:textColor="@color/White"
-            android:background="@color/Green"/>
+            android:background="@color/DarkCyan"/>
         <Button
             android:id="@+id/lifeCounter"
             android:text="Life Counter"
@@ -25,7 +26,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:onClick="lifeCounter"
-            android:background="@color/Green"
+            android:background="@color/DarkCyan"
             android:layout_margin="10dp"/>
         <Button
             android:id="@+id/flipCoin"
@@ -34,7 +35,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:onClick="coinFlip"
-            android:background="@color/Green"
+            android:background="@color/DarkCyan"
             android:layout_margin="10dp" />
         <ImageView
             android:id="@+id/flipResult"

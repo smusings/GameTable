@@ -26,14 +26,12 @@ public class RollListItemView extends TextView{
 	}
 
     //sets up how the itemview looks
-	private Paint marginPaint;
 	private Paint linePaint;
 	private int paperColor;
 	
 	private void init(){
 		Resources myResources = getResources();
-		
-		marginPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+
 		linePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 		linePaint.setColor(myResources.getColor(R.color.LightBlue));
 		paperColor = myResources.getColor(R.color.AntiqueWhite);

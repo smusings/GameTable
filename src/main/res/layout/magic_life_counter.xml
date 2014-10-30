@@ -14,7 +14,7 @@
             android:text="Player One"
             android:gravity="center"
             android:textColor="@color/White"
-            android:background="@color/DarkCyan"/>
+            android:background="@color/DarkBlue"/>
         <View
             android:layout_width="5dp"
             android:layout_height="fill_parent"

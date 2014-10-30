@@ -3,29 +3,30 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/player1buttons">
+    android:id="@+id/player1buttons"
+    android:background="@color/DarkSlateGray">
     <View
         android:layout_width="fill_parent"
         android:layout_height="2dp"
         android:background="@color/Black"/>
     <TextView
-    android:id="@+id/PlayerHealth"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:layout_weight="1"
-    android:background="@color/LightBlue"
-    android:gravity="center"
-    android:fontFamily="sans-serif-condensed"
-    android:textSize="32sp"/>
+        android:id="@+id/PlayerHealth"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:background="@color/LightBlue"
+        android:gravity="center"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="32sp"/>
     <View
-    android:layout_width="fill_parent"
-    android:layout_height="5dp"
-    android:background="@color/Black"/>
+        android:layout_width="fill_parent"
+        android:layout_height="5dp"
+        android:background="@color/Black"/>
     <TextView
         android:id="@+id/poison_health"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="@color/ForestGreen"
+        android:background="@color/DarkGreen"
         android:textSize="30sp"
         android:text="0"
         android:gravity="center"/>
@@ -89,7 +90,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/White"
-            android:background="@color/Green"
+            android:background="@color/DarkGreen"
             android:layout_margin="5dp"/>
         <Button
             android:id="@+id/poisonAddOne"
@@ -98,7 +99,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/White"
-            android:background="@color/Green"
+            android:background="@color/DarkGreen"
             android:layout_margin="5dp"/>
     </LinearLayout>
 </LinearLayout>
