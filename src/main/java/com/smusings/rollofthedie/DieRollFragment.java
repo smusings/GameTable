@@ -53,22 +53,22 @@ public class DieRollFragment extends Fragment {
         @Override
         public void onClick(View v) {
             String message = "null";
-            if (((Button) v) == die4){
+            if (v == die4){
                 message = "Your D4 came up a " + rollResult(4);
             }
-            else if (((Button) v) == die6){
+            else if (v == die6){
                 message = "Your D6 came up a " +  + rollResult(6);
             }
-            else if (((Button) v) == die8){
+            else if (v == die8){
                 message = "Your D8 came up a " + rollResult(8);
             }
-            else if (((Button) v) == die10){
+            else if (v == die10){
                 message = "Your D10 came up a " + rollResult(10);
             }
-            else if (((Button) v) == die12){
+            else if (v == die12){
                 message = "Your D12 came up a " + rollResult(12);
             }
-            else if (((Button) v) == die20){
+            else if (v == die20){
                 message = "Your D20 came up a " + rollResult(20);
             }
             onNewRollListener.onNewRoll(message);

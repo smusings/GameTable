@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/player1buttons"
-    android:background="@color/DarkSlateGray">
+    android:background="@color/LightBlue">
     <View
         android:layout_width="fill_parent"
         android:layout_height="2dp"
@@ -14,7 +14,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_weight="1"
-        android:background="@color/LightBlue"
+        android:background="@color/LightCyan"
         android:gravity="center"
         android:fontFamily="sans-serif-condensed"
         android:textSize="32sp"/>
