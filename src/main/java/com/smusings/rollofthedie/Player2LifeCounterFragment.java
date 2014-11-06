@@ -52,8 +52,7 @@ public class Player2LifeCounterFragment extends Fragment{
         p2poison1 = (Button) view.findViewById(R.id.poisonAddOne);
         p2poisonMin1 = (Button) view.findViewById(R.id.poisonMinOne);
 
-        playerhealth.setText("20");
-        poisonhealth.setText("0");
+        resetHealth();
 
         //sends the number along to an activity
         //plus
