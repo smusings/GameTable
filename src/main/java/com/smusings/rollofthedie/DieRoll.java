@@ -16,7 +16,6 @@ public class DieRoll extends Activity
     public ArrayAdapter<String> aa;
     public ArrayList<String> DieRolls;
     public RollListFragment rollListFragment;
-    public DieRollFragment dieRollFragment;
 
 
     public void onNewRoll(String message) {
@@ -32,8 +31,6 @@ public class DieRoll extends Activity
         FragmentManager fm = getFragmentManager();
         rollListFragment =
                 (RollListFragment) fm.findFragmentById(R.id.RollListFrag);
-        dieRollFragment =
-                (DieRollFragment) fm.findFragmentById(R.id.DieRollFrag);
 
         //Create the array list
         DieRolls = new ArrayList<String>();
