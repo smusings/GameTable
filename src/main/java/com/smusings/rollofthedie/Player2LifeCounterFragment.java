@@ -9,47 +9,50 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class Player2LifeCounterFragment extends Fragment{
+public class Player2LifeCounterFragment extends Fragment
+{
 
     public static final String PREF_COUNT2 = "MyPrefsCount2";
 
     @Override
-    public void onActivityCreated(Bundle savedInstanceState){
+    public void onActivityCreated(Bundle savedInstanceState)
+    {
         super.onActivityCreated(savedInstanceState);
 
         TextView playerhealth = (TextView)getView().findViewById(R.id.PlayerHealth);
         TextView poisonhealth = (TextView)getView().findViewById(R.id.poison_health);
 
-        SharedPreferences pref = getActivity().getSharedPreferences(PREF_COUNT2, 0);
-        String health1 = pref.getString("health2", "20");
-        String poison1 = pref.getString("poison2", "0");
+        SharedPreferences pref    = getActivity().getSharedPreferences(PREF_COUNT2, 0);
+        String            health1 = pref.getString("health2", "20");
+        String            poison1 = pref.getString("poison2", "0");
         playerhealth.setText(health1);
         poisonhealth.setText(poison1);
     }
 
     public TextView playerhealth;
     public TextView poisonhealth;
-    public Button p2plus1;
-    public Button p2plus5;
-    public Button p2minus1;
-    public Button p2minus5;
-    public Button p2poison1;
-    public Button p2poisonMin1;
+    public Button   p2plus1;
+    public Button   p2plus5;
+    public Button   p2minus1;
+    public Button   p2minus5;
+    public Button   p2poison1;
+    public Button   p2poisonMin1;
 
 
     @Override
     public View onCreateView (LayoutInflater inflater, ViewGroup container,
-                              Bundle savedInstanceState){
+                              Bundle savedInstanceState)
+    {
         View view = inflater.inflate(R.layout.life_counter_fragment, container, false);
 
         //player one buttons
         playerhealth = (TextView)view.findViewById(R.id.PlayerHealth);
         poisonhealth = (TextView)view.findViewById(R.id.poison_health);
-        p2plus1 = (Button) view.findViewById(R.id.plusOne);
-        p2plus5 = (Button) view.findViewById(R.id.plusFive);
-        p2minus1 = (Button) view.findViewById(R.id.minusOne);
-        p2minus5 = (Button) view.findViewById(R.id.minusFive);
-        p2poison1 = (Button) view.findViewById(R.id.poisonAddOne);
+        p2plus1      = (Button) view.findViewById(R.id.plusOne);
+        p2plus5      = (Button) view.findViewById(R.id.plusFive);
+        p2minus1     = (Button) view.findViewById(R.id.minusOne);
+        p2minus5     = (Button) view.findViewById(R.id.minusFive);
+        p2poison1    = (Button) view.findViewById(R.id.poisonAddOne);
         p2poisonMin1 = (Button) view.findViewById(R.id.poisonMinOne);
 
         resetHealth();
@@ -68,20 +71,26 @@ public class Player2LifeCounterFragment extends Fragment{
         return view;
     }
 
-    View.OnClickListener health_math = new View.OnClickListener() {
+    View.OnClickListener health_math = new View.OnClickListener()
+    {
         @Override
-        public void onClick(View v) {
+        public void onClick(View v)
+        {
             int n = 0;
-            if (v == p2plus1){
+            if (v == p2plus1)
+            {
                 n = 1;
             }
-            else if (v == p2plus5){
+            else if (v == p2plus5)
+            {
                 n = 5;
             }
-            else if (v == p2minus1){
+            else if (v == p2minus1)
+            {
                 n = -1;
             }
-            else if (v == p2minus5){
+            else if (v == p2minus5)
+            {
                 n = -5;
             }
             playerhealth.setText(Integer.toString(
@@ -89,14 +98,18 @@ public class Player2LifeCounterFragment extends Fragment{
         }
     };
 
-    View.OnClickListener poison_math = new View.OnClickListener() {
+    View.OnClickListener poison_math = new View.OnClickListener()
+    {
         @Override
-        public void onClick(View v) {
+        public void onClick(View v)
+        {
             int n = 0;
-            if (v == p2poison1){
+            if (v == p2poison1)
+            {
                 n = 1;
             }
-            else if (v == p2poisonMin1){
+            else if (v == p2poisonMin1)
+            {
                 n = -1;
             }
             poisonhealth.setText(Integer.toString(
@@ -104,11 +117,13 @@ public class Player2LifeCounterFragment extends Fragment{
         }
     };
 
-    public int life_total_maths(int n, TextView tv){
+    public int life_total_maths(int n, TextView tv)
+    {
         return Integer.valueOf(tv.getText().toString()) + n;
     }
 
-    public void resetHealth(){
+    public void resetHealth()
+    {
         playerhealth.setText("20");
         poisonhealth.setText("0");
     }

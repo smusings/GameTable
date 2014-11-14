@@ -7,20 +7,24 @@ import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-public class RollListItemView extends TextView{
+public class RollListItemView extends TextView
+{
 
     //the roll list item view
-	public RollListItemView(Context context, AttributeSet ats, int ds){
+	public RollListItemView(Context context, AttributeSet ats, int ds)
+    {
 		super(context, ats, ds);
 		init();
 	}
 	
-	public RollListItemView(Context context){
+	public RollListItemView(Context context)
+    {
 		super(context);
 		init();
 	}
 	
-	public RollListItemView(Context context, AttributeSet attrs){
+	public RollListItemView(Context context, AttributeSet attrs)
+    {
 		super(context, attrs);
 		init();
 	}
@@ -29,7 +33,8 @@ public class RollListItemView extends TextView{
 	private Paint linePaint;
 	private int paperColor;
 	
-	private void init(){
+	private void init()
+    {
 		Resources myResources = getResources();
 
 		linePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
@@ -38,7 +43,8 @@ public class RollListItemView extends TextView{
 	}
 	
 	@Override 
-	public void onDraw(Canvas canvas){
+	public void onDraw(Canvas canvas)
+    {
 		canvas.drawColor(paperColor);
 		
 		canvas.drawLine(0, 0, 0, getMeasuredHeight(), linePaint);

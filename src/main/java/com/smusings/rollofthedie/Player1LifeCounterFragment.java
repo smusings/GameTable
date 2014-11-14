@@ -14,7 +14,8 @@ public class Player1LifeCounterFragment extends Fragment{
     public static final String PREF_COUNT1 = "MyPrefsCount1";
 
     @Override
-    public void onActivityCreated(Bundle savedInstanceState){
+    public void onActivityCreated(Bundle savedInstanceState)
+    {
         super.onActivityCreated(savedInstanceState);
 
         TextView playerhealth = (TextView)getView().findViewById(R.id.PlayerHealth);
@@ -29,27 +30,28 @@ public class Player1LifeCounterFragment extends Fragment{
 
     public TextView playerhealth;
     public TextView poisonhealth;
-    public Button p1plus1;
-    public Button p1plus5;
-    public Button p1minus1;
-    public Button p1minus5;
-    public Button p1poison1;
-    public Button p1poisonMin1;
+    public Button   p1plus1;
+    public Button   p1plus5;
+    public Button   p1minus1;
+    public Button   p1minus5;
+    public Button   p1poison1;
+    public Button   p1poisonMin1;
 
 
     @Override
     public View onCreateView (LayoutInflater inflater, ViewGroup container,
-                              Bundle savedInstanceState){
+                              Bundle savedInstanceState)
+    {
         View view = inflater.inflate(R.layout.life_counter_fragment, container, false);
 
         //player one buttons
         playerhealth = (TextView)view.findViewById(R.id.PlayerHealth);
         poisonhealth = (TextView)view.findViewById(R.id.poison_health);
-        p1plus1 = (Button) view.findViewById(R.id.plusOne);
-        p1plus5 = (Button) view.findViewById(R.id.plusFive);
-        p1minus1 = (Button) view.findViewById(R.id.minusOne);
-        p1minus5 = (Button) view.findViewById(R.id.minusFive);
-        p1poison1 = (Button) view.findViewById(R.id.poisonAddOne);
+        p1plus1      = (Button) view.findViewById(R.id.plusOne);
+        p1plus5      = (Button) view.findViewById(R.id.plusFive);
+        p1minus1     = (Button) view.findViewById(R.id.minusOne);
+        p1minus5     = (Button) view.findViewById(R.id.minusFive);
+        p1poison1    = (Button) view.findViewById(R.id.poisonAddOne);
         p1poisonMin1 = (Button) view.findViewById(R.id.poisonMinOne);
 
         resetHealth();
@@ -68,20 +70,26 @@ public class Player1LifeCounterFragment extends Fragment{
         return view;
     }
 
-    View.OnClickListener health_math = new View.OnClickListener() {
+    View.OnClickListener health_math = new View.OnClickListener()
+    {
         @Override
-        public void onClick(View v) {
+        public void onClick(View v)
+        {
             int n = 0;
-            if (v == p1plus1){
+            if (v == p1plus1)
+            {
                 n = 1;
             }
-            else if (v == p1plus5){
+            else if (v == p1plus5)
+            {
                 n = 5;
             }
-            else if (v == p1minus1){
+            else if (v == p1minus1)
+            {
                 n = -1;
             }
-            else if (v == p1minus5){
+            else if (v == p1minus5)
+            {
                 n = -5;
             }
             playerhealth.setText(Integer.toString(
@@ -89,14 +97,18 @@ public class Player1LifeCounterFragment extends Fragment{
         }
     };
 
-    View.OnClickListener poison_math = new View.OnClickListener() {
+    View.OnClickListener poison_math = new View.OnClickListener()
+    {
         @Override
-        public void onClick(View v) {
+        public void onClick(View v)
+        {
             int n = 0;
-            if (v == p1poison1){
+            if (v == p1poison1)
+            {
                 n = 1;
             }
-            else if (v == p1poisonMin1){
+            else if (v == p1poisonMin1)
+            {
                 n = -1;
             }
             poisonhealth.setText(Integer.toString(
@@ -104,17 +116,20 @@ public class Player1LifeCounterFragment extends Fragment{
         }
     };
 
-    public int life_total_maths(int n, TextView tv){
+    public int life_total_maths(int n, TextView tv)
+    {
         return Integer.valueOf(tv.getText().toString()) + n;
     }
 
-    public void resetHealth(){
+    public void resetHealth()
+    {
         //resets the health of the player
         playerhealth.setText("20");
         poisonhealth.setText("0");
     }
 
-    public void onPause(){
+    public void onPause()
+    {
         super.onPause();
 
         SharedPreferences pref = getActivity().getSharedPreferences(PREF_COUNT1, 0);

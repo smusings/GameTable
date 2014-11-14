@@ -11,19 +11,22 @@ import android.widget.ArrayAdapter;
 import java.util.ArrayList;
 
 public class DieRoll extends Activity
-        implements DieRollFragment.OnNewRollListener {
+        implements DieRollFragment.OnNewRollListener
+{
 
     public ArrayAdapter<String> aa;
-    public ArrayList<String> DieRolls;
-    public RollListFragment rollListFragment;
+    public ArrayList<String>    DieRolls;
+    public RollListFragment     rollListFragment;
 
 
-    public void onNewRoll(String message) {
+    public void onNewRoll(String message)
+    {
         aa.insert(message, 0);
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.die_roll);
 
@@ -37,21 +40,24 @@ public class DieRoll extends Activity
 
         //Create the Array Adapter to bind the array to the list view
         int resID = R.layout.roll_list_item;
-        aa = new ArrayAdapter<String>(this, resID, DieRolls);
+        aa    = new ArrayAdapter<String>(this, resID, DieRolls);
 
         //Bind the Array Adapter to the list view
         rollListFragment.setListAdapter(aa);
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.main, menu);
         return true;
     }
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        switch (item.getItemId())
+        {
             case R.id.menu_clear:
                 aa.clear();
                 return true;
